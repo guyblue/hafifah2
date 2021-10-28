@@ -10,15 +10,18 @@
  *      constructor (props){
  *      super(props);
  *      }
- * 
- *      setPicture = () =>{
- *          if (!this.state.pic){
- *          this.state.pic = JSON.stringify(// random pic link //);
- *          }
+ *  
+ *      render{
+ *      return (<img src=// random pic link //)-->option1
+ *      
+ *          set effect () ---> for updating the picture--> check if nessacery
  *      }
- * 
- *      set effect () ---> for updating the picture
  *  }
  * 
  * export default // choose name //;
+ * 
+ * 
+ * // find a way to intagrate the picture to the id of the mainPic always, even when you click a different button //
+ * // ^ for that, check in the Tic-Tac-Toe game //
+ * 
  */
