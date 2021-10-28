@@ -7,6 +7,8 @@ function App() {
      * in case like = true -> add pic to localStorage
      * else -> do nothing
      * at any case-> change picture
+     * 
+     * add useEffect() to do changes on the localStorage to add pics to the localStorage
      */
     if (liked){
 
