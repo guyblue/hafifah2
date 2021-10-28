@@ -1,12 +1,21 @@
 /**
  * this function will be a hook function
  * that updates the picture everytime it gets used
- *  const pic = setState(picture , setPicture);
+ *  const [pic,setPicture] = setState(0);
  * 
- * setPicture = () =>{
- *  this.state.pic = JSON.stringify(// random pic link //);
- * }
+ * import React , (setState , setEffect)...
  * 
- * set effect () ---> for updating the picture
+ * 
+ *  const setPic = () =>{
+ * 
+ *      setPicture = () =>{
+ *          if (!this.state.pic){
+ *          this.state.pic = JSON.stringify(// random pic link //);
+ *          }
+ *      }
+ * 
+ *      set effect () ---> for updating the picture
+ *  }
+ * 
  * export default // choose name //;
  */

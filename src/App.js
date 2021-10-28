@@ -11,7 +11,7 @@ function App() {
      * add useEffect() to do changes on the localStorage to add pics to the localStorage
      */
     if (liked){
-
+      
     }
 
     /**

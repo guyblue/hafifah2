@@ -2,11 +2,14 @@
  *  localStorage for the liked pics, and
  *  update it whenever there's an update to the localStorage
  * 
- *  const likedPics = setState(likedPics,setLikedPics);
- *  
- *  setLikedPics = () =>{
- *  likedPics = {};
- * }
+ *  import React , {setState}... 
  * 
+ *      const setLikedPics = () => {
+ *      const [likedPics,setLikedPicsFun] = setState(0);
+ *  
+ *      setLikedPics = () =>{
+ *          likedPics = {};
+ *      }
+ * }
  *  export default //function name//;
  */
