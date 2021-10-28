@@ -6,7 +6,10 @@
  * import React , (setState , setEffect)...
  * 
  * 
- *  const setPic = () =>{
+ *  const setPic = (props --> id of the main pic) =>{
+ *      constructor (props){
+ *      super(props);
+ *      }
  * 
  *      setPicture = () =>{
  *          if (!this.state.pic){
