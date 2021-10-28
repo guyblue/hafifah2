@@ -26,9 +26,14 @@ function App() {
       
       <body>
 
-        <img id="likeButton" />
-        <img id="mainPic" />
-        <img id="nextPicButton" />
+        <div id="mainPicOpt">
+
+          <img id="likeButton" />
+          <img id="mainPic" />
+          <img id="nextPicButton" />
+
+        </div>
+        
 
       </body>
 
