@@ -30,9 +30,9 @@ function App() {
 
         <div id="mainPicOpt">
 
-          <img id="likeButton" class="sideButton" src="./hafifah/heart.png" />
+          <img id="likeButton" class="sideButton" src="./metirial-pics/heart.png" />
           <img id="mainPic" />
-          <img id="nextPicButton" class="sideButton" src="./hafifah/blackX.png" />
+          <img id="nextPicButton" class="sideButton" src="./metirial-pics/blackX.png" />
 
         </div>
         
