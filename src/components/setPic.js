@@ -1,10 +1,11 @@
 /**
  * this function will be a hook function
  * that updates the picture everytime it gets used
- *  const [pic,setPicture] = setState(0);
+ *  
  * 
- * import React , (setState , setEffect)...
+ * import React , (setState , setEffect) from 'react';
  * 
+ * const [pic,setPicture] = setState(0);
  * 
  *  const setPic = (props --> id of the main pic) =>{
  *      constructor (props){
