@@ -4,12 +4,24 @@
  * 
  *  import React , {setState}... 
  * 
- *      const setLikedPics = () => {
+ *      const setLikedPics = (props) => {
+ *          constructor(props){
+ *              super(props);
+ *          }
+ * 
  *      const [likedPics,setLikedPicsFun] = setState(0);
  *  
  *      setLikedPics = () =>{
  *          likedPics = {};
  *      }
+ *      
+ *      addPic = (props) =>{
+ *          this.state.pics = [...this.state.pics,props];
+ *          // don't forget to add ID//
+ *      }
  * }
+ * 
+ * // add a function to add to the localStorage //
+ * 
  *  export default //function name//;
  */
