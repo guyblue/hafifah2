@@ -1,6 +1,22 @@
 import './css-files/App.css';
 
 function App() {
+
+  const nextPic = (liked) =>{
+    /**
+     * in case like = true -> add pic to localStorage
+     * else -> do nothing
+     * at any case-> change picture
+     */
+    if (liked){
+
+    }
+
+    /**
+     * onClick={this.props.nextPic(true/false)}
+     */
+  }
+
   return (
     <div className="App">
 
