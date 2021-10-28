@@ -7,5 +7,6 @@
  *  this.state.pic = JSON.stringify(// random pic link //);
  * }
  * 
+ * set effect () ---> for updating the picture
  * export default // choose name //;
  */
