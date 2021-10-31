@@ -3,8 +3,6 @@ import styles from './css-files/App.css';
 import React from 'react';
 import SetPic from './components/SetPic.js';
 
-//import './components/setPic';
-
 import pic1 from './metirial-pics/heart.png';
 import pic2 from './metirial-pics/blackX.png';
 
