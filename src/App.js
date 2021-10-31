@@ -1,6 +1,7 @@
 import './css-files/App.css';
 
 import React from 'react';
+import SetPic from './components/SetPic.js';
 
 //import './components/setPic';
 
@@ -23,7 +24,7 @@ function App() {
     // if (liked){
     //   console.log("entered liked");
     // }
-    
+
     return (
       <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" />
     )
@@ -41,7 +42,7 @@ function App() {
         <div id="mainPicOpt">
 
           <img id="likeButton" class="sideButton" src="./metirial-pics/heart.png" alt="likePic" />
-          <div>{nextPic()}</div>
+          <SetPic />
           <img id="nextPicButton" class="sideButton" src="./metirial-pics/blackX.png" alt="nextPic" />
 
         </div>

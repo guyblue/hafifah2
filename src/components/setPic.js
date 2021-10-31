@@ -3,15 +3,28 @@
 //  that updates the picture everytime it gets used
 
 
- import React , { setState } from 'react';
+ import { useEffect, useState } from 'react';
  
- const [pic,setPicture] = setState(0);
  
-  const setPic = (props) =>{ 
-      return (<img id="mainPic" src="random pic link" />)
+ const SetPic = () => { 
+      const [pic,setPicture] = useState();
+
+      useEffect(()=>{
+        fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
+            .then(res => res.json())
+            .then(res => {
+                setPicture(res.message);
+            })
+      })
+
+      return (
+          <div>
+              <img id="mainPic" src={pic} alt="mainPic" />
+          </div>
+      )
   }
  
- export default setPic;
+ export default SetPic;
  
  
  // find a way to intagrate the picture to the id of the mainPic always, even when you click a different button //
