@@ -46,7 +46,7 @@ function App() {
         <div id="mainPicOpt">
 
           <img id="likeButton" class="sideButton" src="./metirial-pics/heart.png" alt="likePic" />
-          <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" onLoad={this.nextPic(this.id,null)} />
+          <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" onLoad={this.state.nextPic(this.id,null)} />
           <img id="nextPicButton" class="sideButton" src="./metirial-pics/blackX.png" alt="nextPic" />
 
         </div>
