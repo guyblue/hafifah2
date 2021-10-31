@@ -5,6 +5,10 @@
 
  import { useEffect, useState } from 'react';
  import styles from '../css-files/App.css';
+
+ import pic1 from '../metirial-pics/heart.png';
+ import pic2 from '../metirial-pics/blackX.png';
+
  
  const SetPic = () => { 
       const [pic,setPicture] = useState();
@@ -19,7 +23,9 @@
 
       return (
           <div>
-              <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
+                <img id="likeButton" className="sideButton" src={pic1} alt="likePic" />
+                <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
+                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" />
           </div>
       )
   }
