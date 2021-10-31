@@ -12,6 +12,7 @@
  
  const SetPic = () => { 
       const [pic,setPicture] = useState();
+      const [isClicked,setIsClicked] = useState(true);
 
       useEffect(()=>{
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
@@ -19,13 +20,14 @@
             .then(res => {
                 setPicture(res.message);
             })
-      },[/**onclick something... */]);
+            setIsClicked(false);
+      },[isClicked]);
 
       return (
           <div id="mainPicOpt">
                 <img id="likeButton" className="sideButton" src={pic1} alt="likePic" />
                 <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
-                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" />
+                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>{setIsClicked(true)}} />
           </div>
       )
   }
