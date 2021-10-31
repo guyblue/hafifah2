@@ -9,7 +9,7 @@ import React from 'react';
 
 function App() {
 
-  const nextPic = (props,liked) =>{
+  const nextPic = () =>{
 
     /**
      * in case like = true -> add pic to localStorage
@@ -24,7 +24,13 @@ function App() {
     //   console.log("entered liked");
     // }
 
-      document.getElementById(props).src = "https://dog.ceo/api/breed/Germanshepherd/images/random";
+
+    return (
+      <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" />
+    )
+
+
+      // document.getElementById(props).src = "https://dog.ceo/api/breed/Germanshepherd/images/random";
 
   
     //  onClick={this.props.nextPic(true/false)}
@@ -43,7 +49,7 @@ function App() {
         <div id="mainPicOpt">
 
           <img id="likeButton" class="sideButton" src="./metirial-pics/heart.png" alt="likePic" />
-          <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" onLoad={nextPic(this.id,null)} />
+          <div>{nextPic()}</div>
           <img id="nextPicButton" class="sideButton" src="./metirial-pics/blackX.png" alt="nextPic" />
 
         </div>
