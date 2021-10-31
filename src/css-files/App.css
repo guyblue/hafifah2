@@ -13,7 +13,7 @@
   color: white;
 }*/
 
-#mainPic{
+.mainPic{
   width: 300px;
   height: 300px;
   margin:black solid 10px;
@@ -27,7 +27,7 @@
   flex-shrink: 0;
 }
 
-header{
+.title{
   background-color: #61dafb;
   outline: solid blue 2px;
 }

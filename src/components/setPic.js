@@ -4,7 +4,7 @@
 
 
  import { useEffect, useState } from 'react';
- 
+ import styles from '../css-files/App.css';
  
  const SetPic = () => { 
       const [pic,setPicture] = useState();
@@ -15,11 +15,11 @@
             .then(res => {
                 setPicture(res.message);
             })
-      })
+      },[]);
 
       return (
           <div>
-              <img id="mainPic" src={pic} alt="mainPic" />
+              <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
           </div>
       )
   }

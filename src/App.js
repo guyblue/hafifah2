@@ -1,4 +1,4 @@
-import './css-files/App.css';
+import styles from './css-files/App.css';
 
 import React from 'react';
 import SetPic from './components/SetPic.js';
@@ -33,22 +33,17 @@ function App() {
   return (
     <div className="App">
 
-      <header class="app-header">
-        <h1 id="title">TinDog</h1>
-      </header>
-      
-      <body>
+        <h1 id="title" className="title">TinDog</h1>
+
 
         <div id="mainPicOpt">
 
-          <img id="likeButton" class="sideButton" src="./metirial-pics/heart.png" alt="likePic" />
+          <img id="likeButton" className="sideButton" src="./metirial-pics/heart.png" alt="likePic" />
           <SetPic />
-          <img id="nextPicButton" class="sideButton" src="./metirial-pics/blackX.png" alt="nextPic" />
+          <img id="nextPicButton" className="sideButton" src="./metirial-pics/blackX.png" alt="nextPic" />
 
         </div>
-        
 
-      </body>
 
     </div>
   );
