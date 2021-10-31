@@ -10,33 +10,13 @@ import pic2 from './metirial-pics/blackX.png';
 
 function App() {
 
-  const nextPic = () =>{
-
-    /**
-     * in case like = true -> add pic to localStorage
-     * else -> do nothing
-     * at any case-> change picture
-     * 
-     * add useEffect() to do changes on the localStorage to add pics to the localStorage
-     */
-
-
-    // if (liked){
-    //   console.log("entered liked");
-    // }
-
-    return (
-      <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" />
-    )
-  }
-
   return (
     <div className="App">
 
         <h1 id="title" className="title">TinDog</h1>
 
 
-        <div id="mainPicOpt">
+        <div class="mainPicOpt">
 
           <img id="likeButton" className="sideButton" src={pic1} alt="likePic" />
           <SetPic />
