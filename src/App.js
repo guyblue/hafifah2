@@ -5,8 +5,8 @@ import SetPic from './components/SetPic.js';
 
 //import './components/setPic';
 
-// import './metirial-pics/heart.png';
-// import './metirial-pics/blackX.png';
+import pic1 from './metirial-pics/heart.png';
+import pic2 from './metirial-pics/blackX.png';
 
 function App() {
 
@@ -38,9 +38,9 @@ function App() {
 
         <div id="mainPicOpt">
 
-          <img id="likeButton" className="sideButton" src="./metirial-pics/heart.png" alt="likePic" />
+          <img id="likeButton" className="sideButton" src={pic1} alt="likePic" />
           <SetPic />
-          <img id="nextPicButton" className="sideButton" src="./metirial-pics/blackX.png" alt="nextPic" />
+          <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" />
 
         </div>
 
