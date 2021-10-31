@@ -23,18 +23,10 @@ function App() {
     // if (liked){
     //   console.log("entered liked");
     // }
-
-
+    
     return (
       <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" />
     )
-
-
-      // document.getElementById(props).src = "https://dog.ceo/api/breed/Germanshepherd/images/random";
-
-  
-    //  onClick={this.props.nextPic(true/false)}
-  
   }
 
   return (
