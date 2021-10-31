@@ -8,7 +8,6 @@
 
  import pic1 from '../metirial-pics/heart.png';
  import pic2 from '../metirial-pics/blackX.png';
-import { findAllInRenderedTree } from 'react-dom/test-utils';
 
  
  const SetPic = () => { 
