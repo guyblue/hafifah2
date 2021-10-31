@@ -8,6 +8,7 @@
 
  import pic1 from '../metirial-pics/heart.png';
  import pic2 from '../metirial-pics/blackX.png';
+import { findAllInRenderedTree } from 'react-dom/test-utils';
 
  
  const SetPic = () => { 
@@ -19,10 +20,10 @@
             .then(res => {
                 setPicture(res.message);
             })
-      },[]);
+      },[/**onclick something... */]);
 
       return (
-          <div>
+          <div id="mainPicOpt">
                 <img id="likeButton" className="sideButton" src={pic1} alt="likePic" />
                 <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
                 <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" />
