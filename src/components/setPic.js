@@ -20,14 +20,13 @@
             .then(res => {
                 setPicture(res.message);
             })
-            setIsClicked(false);
       },[isClicked]);
 
       return (
           <div id="mainPicOpt">
-                <img id="likeButton" className="sideButton" src={pic1} alt="likePic" />
+                <img id="likeButton" className="sideButton" src={pic1} alt="likePic" onClick={()=>setIsClicked(!isClicked)} />
                 <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
-                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>setIsClicked(true)} />
+                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>setIsClicked(!isClicked)} />
           </div>
       )
   }
