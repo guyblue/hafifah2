@@ -18,16 +18,13 @@ function App() {
      * 
      * add useEffect() to do changes on the localStorage to add pics to the localStorage
      */
-    if (liked){
-      console.log("entered liked");
-    }
 
-    if (!document.getElementById(props).src){
+
+    // if (liked){
+    //   console.log("entered liked");
+    // }
+
       document.getElementById(props).src = "https://dog.ceo/api/breed/Germanshepherd/images/random";
-    }
-    else{
-
-    }
 
   
     //  onClick={this.props.nextPic(true/false)}
@@ -46,7 +43,7 @@ function App() {
         <div id="mainPicOpt">
 
           <img id="likeButton" class="sideButton" src="./metirial-pics/heart.png" alt="likePic" />
-          <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" onLoad={this.state.nextPic(this.id,null)} />
+          <img id="mainPic" src="https://dog.ceo/api/breed/Germanshepherd/images/random" alt="mainPic" onLoad={nextPic(this.id,null)} />
           <img id="nextPicButton" class="sideButton" src="./metirial-pics/blackX.png" alt="nextPic" />
 
         </div>
