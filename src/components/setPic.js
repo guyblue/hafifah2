@@ -27,7 +27,7 @@
           <div id="mainPicOpt">
                 <img id="likeButton" className="sideButton" src={pic1} alt="likePic" />
                 <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
-                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>{setIsClicked(true)}} />
+                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>setIsClicked(true)} />
           </div>
       )
   }
