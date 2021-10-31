@@ -17,12 +17,14 @@
   width: 300px;
   height: 300px;
   margin:black solid 10px;
+  flex-shrink: 0;
 }
 
 .sideButton{
   width: 100px;
   height: 100px;
   margin: black solid 5px;
+  flex-shrink: 0;
 }
 
 header{

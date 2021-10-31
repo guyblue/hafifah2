@@ -1,8 +1,14 @@
 import './css-files/App.css';
 
+//import './components/setPic';
+
+import './metirial-pics/heart.png';
+import './metirial-pics/blackX.png';
+
 function App() {
 
-  const nextPic = (liked) =>{
+  const nextPic = (props,liked) =>{
+
     /**
      * in case like = true -> add pic to localStorage
      * else -> do nothing
@@ -11,12 +17,12 @@ function App() {
      * add useEffect() to do changes on the localStorage to add pics to the localStorage
      */
     if (liked){
-      
+      console.log("entered liked");
     }
 
-    /**
-     * onClick={this.props.nextPic(true/false)}
-     */
+  
+    //  onClick={this.props.nextPic(true/false)}
+  
   }
 
   return (
@@ -30,9 +36,9 @@ function App() {
 
         <div id="mainPicOpt">
 
-          <img id="likeButton" class="sideButton" src="./metirial-pics/heart.png" />
-          <img id="mainPic" />
-          <img id="nextPicButton" class="sideButton" src="./metirial-pics/blackX.png" />
+          <img id="likeButton" class="sideButton" src="./metirial-pics/heart.png" alt="likePic" />
+          <img id="mainPic" alt="mainPic" />
+          <img id="nextPicButton" class="sideButton" src="./metirial-pics/blackX.png" alt="nextPic" />
 
         </div>
         
