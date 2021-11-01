@@ -43,7 +43,7 @@
       }
 
       return (
-          <div id="mainPicOpt">
+          <div class="mainPicOpt">
                 <img id="likeButton" className="sideButton" src={pic1} alt="likePic" onClick={()=>{
                     like(true);
                     setIsClicked(!isClicked);
