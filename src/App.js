@@ -11,11 +11,7 @@ function App() {
         <h1 id="title" className="title">TinDog</h1>
 
 
-        <div class="mainPicOpt">
-
           <SetPic />
-
-        </div>
 
 
     </div>
