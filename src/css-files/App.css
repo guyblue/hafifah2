@@ -51,6 +51,7 @@
 
 
 .likesPageButton{
+  position: relative;
   display: flex;
 }
 .likesButtonText{

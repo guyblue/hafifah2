@@ -4,7 +4,7 @@
 
 
  import { useEffect, useState } from 'react';
- import styles from '../css-files/App.css';
+ import '../css-files/App.css';
 
  import pic1 from '../metirial-pics/heart.png';
  import pic2 from '../metirial-pics/blackX.png';

@@ -1,15 +1,17 @@
 import React from 'react';
-import styles from '../css-files/App.css';
+import '../css-files/App.css';
 
 
-import buttonPic from '../src/likes button heart picture.png'
+import buttonPic from '../metirial-pics/likes button heart picture.png';
 
-const likesPageButton = () =>{
+const likesPageButtonDiv = () =>{
     
     return(
-        <div className="likesPageButton">
+        <div id="likesPageButtonID" className="likesPageButton">
             <img className="likesPageButtonPic" src={buttonPic} alt="buttonPic" />
             <p className="likesButtonText">liked pictures</p>
         </div>
     )
 }
+
+export default likesPageButtonDiv;

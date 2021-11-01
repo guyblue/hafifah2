@@ -1,7 +1,8 @@
-import styles from './css-files/App.css';
+import './css-files/App.css';
 
 import React from 'react';
 import SetPic from './components/SetPic.js';
+import './components/likesPageButton.js';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
 
 
           <SetPic />
-
+          <likesPageButtonDiv />
 
     </div>
   );
