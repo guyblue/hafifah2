@@ -14,7 +14,6 @@
 }*/
 
 .mainPic{
-  position: relative;
   width: 300px;
   height: 300px;
   border:black solid 2px;
@@ -22,7 +21,6 @@
 }
 
 .sideButton{
-  position: relative;
   width: 100px;
   height: 100px;
   border: black solid 1px;
