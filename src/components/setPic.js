@@ -30,14 +30,10 @@
             localStorage.setItem('likedPics', JSON.stringify(changes));
         }
         else{
-            // localStorage.setItem('likedPics',JSON.stringify([...JSON.parse(localStorage.getItem('likedpics')),pic]));
-            console.log("entered localStorage func else");
-            console.log("JSON.prase=",localStorage.getItem('likedPics'));
             let changes = JSON.parse(localStorage.getItem('likedPics'));
             changes = [...changes, pic];
             localStorage.setItem('likedPics', JSON.stringify(changes));
             changes = [];
-            console.log("entered finished localStorage func else");
         }
     }
       }
@@ -49,9 +45,7 @@
                     setIsClicked(!isClicked);
                 }} />
                 <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
-                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>{
-                    setIsClicked(!isClicked);
-                    }} />
+                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>setIsClicked(!isClicked)} />
           </div>
       )
 
