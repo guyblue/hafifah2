@@ -14,6 +14,14 @@
 }*/
 
 
+
+.Options{
+  display:flex;
+  justify-content: center;
+}
+
+
+
 .title{
   background-color: #61dafb;
   outline: solid blue 2px;
@@ -48,13 +56,9 @@
 
 
 
-
-
 .likesPageButton{
   position: relative;
   display: flex;
-  height:100px;
-  width:100px;
 }
 .likesButtonText{
   position: absolute;
@@ -64,5 +68,4 @@
   position: relative;
   height:100px;
   width: 100px;
-  flex-shrink: 0;
 }
