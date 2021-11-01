@@ -12,7 +12,6 @@
  const SetPic = () => {
       const [pic,setPicture] = useState();
       const [isClicked,setIsClicked] = useState(true);
-      const [isLiked,setIsLiked] = useState(false);
 
       useEffect(()=>{
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
@@ -23,27 +22,34 @@
             
       },[isClicked]);
 
-      useEffect(()=>{
+      const like = (isLiked) => {
           if (isLiked){
         if (!localStorage.getItem('likedPics')){
-            localStorage.setItem('likedPics',[...JSON.stringify(pic)]);
+            let changes = [];
+            changes.push(pic);
+            localStorage.setItem('likedPics', JSON.stringify(changes));
         }
         else{
-            localStorage.setItem('likedPics',[...localStorage.getItem('likedpics'),JSON.stringify(pic)]); 
+            // localStorage.setItem('likedPics',JSON.stringify([...JSON.parse(localStorage.getItem('likedpics')),pic]));
+            console.log("entered localStorage func else");
+            console.log("JSON.prase=",localStorage.getItem('likedPics'));
+            let changes = JSON.parse(localStorage.getItem('likedPics'));
+            changes = [...changes, pic];
+            localStorage.setItem('likedPics', JSON.stringify(changes));
+            changes = [];
+            console.log("entered finished localStorage func else");
         }
     }
-      });
+      }
 
       return (
           <div id="mainPicOpt">
                 <img id="likeButton" className="sideButton" src={pic1} alt="likePic" onClick={()=>{
-                    setIsLiked(true);
+                    like(true);
                     setIsClicked(!isClicked);
-
                 }} />
                 <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
                 <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>{
-                    setIsLiked(false);
                     setIsClicked(!isClicked);
                     }} />
           </div>
