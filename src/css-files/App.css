@@ -13,13 +13,25 @@
   color: white;
 }*/
 
+
+.title{
+  background-color: #61dafb;
+  outline: solid blue 2px;
+}
+
+
+
+.mainPicOpt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .mainPic{
   width: 300px;
   height: 300px;
   border:black solid 2px;
   margin: 10px;
 }
-
 .sideButton{
   width: 100px;
   height: 100px;
@@ -28,17 +40,26 @@
   padding: 3px;
 }
 
-.title{
-  background-color: #61dafb;
-  outline: solid blue 2px;
-}
+
 
 .App-link {
   color: #61dafb;
 }
 
-.mainPicOpt{
+
+
+
+
+.likesPageButton{
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+.likesButtonText{
+  position: absolute;
+  text-align: center;
+}
+.likesPageButtonPic{
+  position: relative;
+  height:100px;
+  width: 100px;
+  flex-shrink: 0;
 }
