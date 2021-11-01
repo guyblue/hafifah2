@@ -5,6 +5,7 @@ import SetPic from './components/SetPic.js';
 
 function App() {
 
+  localStorage.setItem('likedPics',[]);
   return (
     <div className="App">
 
