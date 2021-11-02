@@ -41,3 +41,4 @@ export default likesPageButtonDiv;
 // for more information on react router dom, read on
 // https://reactrouter.com/web/guides/quick-start to start react router dom 
 // and https://reactrouter.com/web/guides/primary-components
+// about server-rendering in https://reactrouter.com/web/guides/server-rendering
