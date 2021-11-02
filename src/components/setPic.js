@@ -1,6 +1,7 @@
-
-//  this function will be a hook function
-//  that updates the picture everytime it gets used
+// the function update the new main pic every
+// time the app is update rendering, and add the
+// current main pic into the localStorage everytime
+// you click on the like button
 
 
  import { useEffect, useState } from 'react';
@@ -53,8 +54,4 @@
   }
  
  export default SetPic;
- 
- 
- // find a way to intagrate the picture to the id of the mainPic always, even when you click a different button //
- // ^ for that, check in the Tic-Tac-Toe game //
  

@@ -1,3 +1,6 @@
+// this app creates the button to change
+// to the liked pics site when clicked
+
 import React from 'react';
 import LikedPicsPage from '../likedPicsPage.js';
 import '../css-files/App.css';
@@ -36,3 +39,7 @@ const likesPageButtonDiv = () =>{
 }
 
 export default likesPageButtonDiv;
+
+// for more information on react router dom, read on
+// https://reactrouter.com/web/guides/quick-start to start react router dom 
+// and https://reactrouter.com/web/guides/primary-components
