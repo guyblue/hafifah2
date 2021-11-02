@@ -5,7 +5,7 @@ import React from 'react';
 import LikedPicsPage from '../likedPicsPage.js';
 import '../css-files/App.css';
 
-import { BrowserRouter as Router, 
+import { 
     Switch , 
     Route, 
     Link 
@@ -19,8 +19,7 @@ import buttonPic from '../metirial-pics/likes button heart picture.png';
 const likesPageButtonDiv = () =>{
     
     return(
-        <Router>
-
+        <div>
             <Link to="../likedPicsPage.js">
                 <div id="likesPageButtonID" className="likesPageButton">
                     <img className="likesPageButtonPic" src={buttonPic} alt="buttonPic" />
@@ -33,8 +32,7 @@ const likesPageButtonDiv = () =>{
                     <LikedPicsPage />    
                 </Route>
             </Switch>
-
-        </Router>
+        </div>
     )
 }
 
