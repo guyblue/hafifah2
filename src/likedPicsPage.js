@@ -4,8 +4,8 @@ const LikedPicsPage = () =>{
 
 
     return(
-        <div className="siteBody">
-            <h1 className="title">Pictures you liked</h1>
+        <div>
+            <h1>Pictures you liked</h1>
 
 
         </div>
