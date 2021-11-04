@@ -1,0 +1,29 @@
+.App {
+    text-align: center;
+  }
+
+  .title{
+    background-color: #61dafb;
+    outline: solid blue 2px;
+  }
+
+  
+  .mainPageButton{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    width: 120px;
+    cursor:pointer;
+  }
+  .mainButtonText{
+    position:absolute;
+    top:20%;
+    left:10%;
+  }
+  .mainPageButtonPic{
+    position: relative;
+    height:120px;
+    width: 120px;
+  }
+  
