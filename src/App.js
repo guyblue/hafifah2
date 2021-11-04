@@ -14,7 +14,6 @@ import { BrowserRouter ,
 
 import LikesPageButtonDiv from './components/likesPageButton.js';
 
-
 function App() {
 
   const [siteLink, setSiteLink] = useState("/mainPage");

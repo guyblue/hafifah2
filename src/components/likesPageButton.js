@@ -2,7 +2,6 @@
 // to the liked pics site when clicked
 
 import React from 'react';
-import LikedPicsPage from '../likedPicsPage.js';
 import '../css-files/App.css';
 
 import { 
@@ -10,9 +9,6 @@ import {
     Route, 
     Link 
 } from "react-router-dom";
-
-
-
 
 import buttonPic from '../metirial-pics/likes button heart picture.png';
 
