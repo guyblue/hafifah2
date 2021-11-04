@@ -1,6 +1,6 @@
 import './css-files/App.css';
 
-import React , { useEffect, useState } from 'react';
+import React from 'react';
 
 import SetPic from './components/SetPic.js';
 import LikedPicsPage from './likedPicsPage.js';
@@ -15,18 +15,7 @@ import { BrowserRouter ,
 import LikesPageButtonDiv from './components/likesPageButton.js';
 
 function App() {
-
-  const [siteLink, setSiteLink] = useState("/mainPage");
-  // have useEffect that starts the first changes to the react
-  // as the mainPage link
-  useEffect((siteLink)=>{
-    if (siteLink=="/likedPicsPage.js"){
-
-    }
-    else{
-      <NavLink to=""/>
-    }
-  });
+  <NavLink to=""/>
 
   return (
   <BrowserRouter>
