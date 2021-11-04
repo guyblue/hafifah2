@@ -1,7 +1,7 @@
 // the liked pictures site, in
 // which the liked pics are displayed
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { 
     Switch , 
@@ -13,7 +13,7 @@ import './css-files/App.css';
 import buttonPic from './metirial-pics/likes button heart picture.png';
 
 const LikedPicsPage = () =>{
-
+    const [likedPics , setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
 
     return(
         <div className="App">
