@@ -1,28 +1,63 @@
 import './css-files/App.css';
 
-import React from 'react';
+import React , { useEffect, useState } from 'react';
 
 import SetPic from './components/SetPic.js';
-import { BrowserRouter } from 'react-router-dom';
+import LikedPicsPage from './likedPicsPage.js';
+import { BrowserRouter , 
+    Switch , 
+    Route, 
+    Link ,
+    NavLink ,
+    Redirect
+} from "react-router-dom";
 
 import LikesPageButtonDiv from './components/likesPageButton.js';
 
 
 function App() {
 
+  const [siteLink, setSiteLink] = useState("/mainPage");
+  // have useEffect that starts the first changes to the react
+  // as the mainPage link
+  useEffect((siteLink)=>{
+    if (siteLink=="/likedPicsPage.js"){
+
+    }
+    else{
+      <NavLink to=""/>
+    }
+  });
+
   return (
   <BrowserRouter>
-      <div className="App">
 
-          <h1 id="title" className="title">TinDog</h1>
+    <Switch>
 
-          <div className="Options">
-            
-            <SetPic />
-            <LikesPageButtonDiv />
+        <Route path="/likedPicsPage.js">
+
+            <LikedPicsPage />
+
+        </Route>
+
+        <Route path="">
+
+          <div className="App">
+
+              <h1 id="title" className="title">TinDog</h1>
+
+              <div className="Options">
+                
+                <SetPic />
+                <LikesPageButtonDiv />
+
+              </div>
 
           </div>
-      </div>
+
+        </Route>
+
+      </Switch>
     </BrowserRouter>
   );
 }
