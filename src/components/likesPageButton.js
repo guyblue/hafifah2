@@ -4,11 +4,7 @@
 import React from 'react';
 import '../css-files/App.css';
 
-import { 
-    Switch , 
-    Route, 
-    Link 
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import buttonPic from '../metirial-pics/likes button heart picture.png';
 

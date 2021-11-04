@@ -7,9 +7,7 @@ import LikedPicsPage from './likedPicsPage.js';
 import { BrowserRouter , 
     Switch , 
     Route, 
-    Link ,
-    NavLink ,
-    Redirect
+    NavLink
 } from "react-router-dom";
 
 import LikesPageButtonDiv from './components/likesPageButton.js';

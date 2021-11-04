@@ -3,11 +3,7 @@
 
 import React, { useState } from 'react';
 
-import { 
-    Switch , 
-    Route, 
-    Link 
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './css-files/App.css';
 
 import buttonPic from './metirial-pics/likes button heart picture.png';
