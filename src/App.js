@@ -23,13 +23,10 @@ function App() {
     <Switch>
 
         <Route path="/likedPicsPage.js">
-
             <LikedPicsPage />
-
         </Route>
 
         <Route path="">
-
           <div className="App">
 
               <h1 id="title" className="title">TinDog</h1>
@@ -42,7 +39,6 @@ function App() {
               </div>
 
           </div>
-
         </Route>
 
       </Switch>
