@@ -29,12 +29,12 @@ const LikedPicsFrames = () =>{
 
     useEffect(()=>{
         setNewDiv(<div className="likedPicsTable">{()=>{
-            likedPics.map((x)=>{
+            likedPics.map((x)=>{return(
                 <div className="likedPicsFrame" id={x}>
                 <img className="likedPicture" src={likedPics[x]} alt="likedPic" />
                 <img className="dislikeButton" src={Dislike} alt="dislikeButton" onClick={dislike(likedPics[x])} />
             </div>
-            });
+            )});
         }}</div>);
     },[likedPics]);
 
