@@ -15,6 +15,8 @@ const LikedPicsPage = () =>{
         <div className="App">
             <h1 className="title">Pictures you liked</h1>
 
+            <LikedPicsTable />
+
             <Link to="">
                 <div id="backMainPageButton" className="mainPageButton">
                     <img className="mainPageButtonPic" src={buttonPic} alt="buttonPic" />
