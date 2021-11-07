@@ -2,7 +2,6 @@ import React, { useState , useEffect } from 'react';
 import '../css-files/LikedPicsPageDesgin.css';
 
 import Dislike from '../metirial-pics/dislike.png';
-import likesPageButtonDiv from './likesPageButton';
 
 const LikedPicsFrames = () =>{
     const [likedPics , setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
@@ -33,7 +32,7 @@ const LikedPicsFrames = () =>{
             likedPics.map((x)=>{
                 <div className="likedPicsFrame" id={x}>
                 <img className="likedPicture" src={likedPics[x]} alt="likedPic" />
-                <img className="dislikeButton" src={Dislike} alt="dislikeButton" onClick={dislike(likedPics[x])}/>
+                <img className="dislikeButton" src={Dislike} alt="dislikeButton" onClick={dislike(likedPics[x])} />
             </div>
             });
         }}</div>);
