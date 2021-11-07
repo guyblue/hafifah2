@@ -2,6 +2,7 @@ import React, { useState , useEffect } from 'react';
 import '../css-files/LikedPicsPageDesgin.css';
 
 import Dislike from '../metirial-pics/dislike.png';
+import likesPageButtonDiv from './likesPageButton';
 
 const LikedPicsFrames = () =>{
     const [likedPics , setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
@@ -18,18 +19,23 @@ const LikedPicsFrames = () =>{
         setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
     }
 
-    const placeFrame = (pic,ID) =>{
-        <div className="likedPicsFrame" id={ID}>
-            <img className="likedPicture" src={pic} alt="likedPic" onClick={dislike(pic)}/>
-            <img className="dislikeButton" src={Dislike} alt="dislikeButton" />
-        </div>
-    }
+    // const placeFrame = (pic,ID) =>{
+    //     return(
+    //     <div className="likedPicsFrame" id={ID}>
+    //         <img className="likedPicture" src={pic} alt="likedPic" onClick={dislike(pic)}/>
+    //         <img className="dislikeButton" src={Dislike} alt="dislikeButton" />
+    //     </div>
+    //     )
+    // }
 
     useEffect(()=>{
         setNewDiv(<div className="likedPicsTable">{()=>{
-            for (let x=0;x<likedPics.length();x++){
-                placeFrame(JSON.parse(likedPics[x]),x);
-            }
+            likedPics.map((x)=>{
+                <div className="likedPicsFrame" id={x}>
+                <img className="likedPicture" src={likedPics[x]} alt="likedPic" />
+                <img className="dislikeButton" src={Dislike} alt="dislikeButton" onClick={dislike(likedPics[x])}/>
+            </div>
+            });
         }}</div>);
     },[likedPics]);
 
