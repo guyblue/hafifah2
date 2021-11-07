@@ -5,6 +5,7 @@ import Dislike from '../metirial-pics/dislike.png';
 
 const LikedPicsFrames = () =>{
     const [likedPics , setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
+    let newDiv;
 
     const removeFromStorage = (link) => {
         let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
@@ -25,7 +26,7 @@ const LikedPicsFrames = () =>{
     }
 
     useEffect(()=>{
-        let newDiv = <div class="likedPicsTable" onLoad={()=>{
+        newDiv = <div class="likedPicsTable" onLoad={()=>{
             for (let x=0;x<likedPics.length();x++){
                 placeFrame(JSON.parse(likedPics[x]),x);
             }
