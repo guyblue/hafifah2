@@ -1,9 +1,10 @@
 // the liked pictures site, in
 // which the liked pics are displayed
 
-import React, { useState } from 'react';
-
+import React from 'react';
 import { Link } from "react-router-dom";
+
+import LikedPicsTable from './components/displayLikedPics.js';
 import './css-files/LikedPicsPageDesgin.css';
 
 import buttonPic from './metirial-pics/likes button heart picture.png';

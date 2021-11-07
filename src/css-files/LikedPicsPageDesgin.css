@@ -7,7 +7,27 @@
     outline: solid blue 2px;
   }
 
-  
+  .likedPicsTable{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .likedPicsFrame{
+    display: flex;
+  }
+  .likedPicture{
+    position: relative;
+    height:100px;
+    width:100px;
+    border: black solid 5px;
+  }
+  .dislikeButton{
+      position: absolute;
+      height:50px;
+      width:50px;
+      border: black solid 2px;
+  }
+
+
   .mainPageButton{
     position: relative;
     display: flex;

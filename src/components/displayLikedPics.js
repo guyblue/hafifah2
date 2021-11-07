@@ -1,4 +1,6 @@
 import React, { useState , useEffect } from 'react';
+import '../css-files/LikedPicsPageDesgin.css';
+
 import Dislike from '../metirial-pics/dislike.png';
 
 const LikedPicsFrames = () =>{
@@ -16,14 +18,14 @@ const LikedPicsFrames = () =>{
     }
 
     const placeFrame = (pic,ID) =>{
-        <div id={ID}>
-            <img src={Dislike} alt="dislikeButton" />
-            <img src={pic} alt="likedPic" onClick={dislike(pic)}/>
+        <div class="likedPicsFrame" id={ID}>
+            <img class="likedPicture" src={pic} alt="likedPic" onClick={dislike(pic)}/>
+            <img class="dislikeButton" src={Dislike} alt="dislikeButton" />
         </div>
     }
 
     useEffect(()=>{
-        let newDiv = <div onLoad={()=>{
+        let newDiv = <div class="likedPicsTable" onLoad={()=>{
             for (let x=0;x<likedPics.length();x++){
                 placeFrame(JSON.parse(likedPics[x]),x);
             }
