@@ -24,19 +24,24 @@
       },[isClicked]);
 
       const like = (isLiked) => {
-          if (isLiked){
-        if (!localStorage.getItem('likedPics')){
-            let changes = [];
-            changes.push(pic);
-            localStorage.setItem('likedPics', JSON.stringify(changes));
+        if (isLiked){
+            if ((localStorage.getItem('likedPics'))&&(JSON.parse(localStorage.getItem('likedPics')).includes(pic))){
+                console.log("sorry, that picture is already saved in the liked pictures");
+            }
+            else{
+                if (!localStorage.getItem('likedPics')){
+                    let changes = [];
+                    changes.push(pic);
+                    localStorage.setItem('likedPics', JSON.stringify(changes));
+                }
+                else{
+                    let changes = JSON.parse(localStorage.getItem('likedPics'));
+                    changes = [...changes, pic];
+                    localStorage.setItem('likedPics', JSON.stringify(changes));
+                    changes = [];
+                }
+            }
         }
-        else{
-            let changes = JSON.parse(localStorage.getItem('likedPics'));
-            changes = [...changes, pic];
-            localStorage.setItem('likedPics', JSON.stringify(changes));
-            changes = [];
-        }
-    }
       }
 
       return (
