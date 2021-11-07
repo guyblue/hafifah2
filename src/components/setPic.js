@@ -7,12 +7,15 @@
  import { useEffect, useState } from 'react';
  import '../css-files/App.css';
 
- import pic1 from '../metirial-pics/heart.png';
+ import heartEmpty from '../metirial-pics/heart.png';
+ import heartFull from '../metirial-pics/heart filled.png';
  import pic2 from '../metirial-pics/blackX.png';
 
  const SetPic = () => {
       const [pic,setPicture] = useState();
       const [isClicked,setIsClicked] = useState(true);
+      const [heartPic , setHeartPic] = useState(heartEmpty);
+      const [isLikeHover, setIsLikeHover] = useState(false);
 
       useEffect(()=>{
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
@@ -22,6 +25,13 @@
             });
             
       },[isClicked]);
+
+    //   useEffect(()=>{
+    //       if(!isLikeHover)
+    //         setHeartPic(heartEmpty);
+    //       else
+    //         setHeartPic(heartFull);
+    //   },[isLikeHover]);
 
       const like = (isLiked) => {
         if (isLiked){
@@ -46,7 +56,7 @@
 
       return (
           <div className="mainPicOpt">
-                <img id="likeButton" className="sideButton" src={pic1} alt="likePic" onClick={()=>{
+                <img id="likeButton" className="sideButton" src={heartPic} alt="likePic" onClick={()=>{
                     like(true);
                     setIsClicked(!isClicked);
                 }} />
