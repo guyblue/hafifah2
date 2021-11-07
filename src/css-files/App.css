@@ -50,6 +50,9 @@
   padding: 3px;
   cursor:pointer;
 }
+.sideButton:hover{
+  opacity: 70%;
+}
 
 
 
