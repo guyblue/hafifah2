@@ -17,7 +17,7 @@ const LikedPicsPage = () =>{
 
             {/* <LikedPicsTable /> */}
 
-            <Link to="">
+            <Link className="nextSiteLink" to="">
                 <div id="backMainPageButton" className="mainPageButton">
                     <img className="mainPageButtonPic" src={buttonPic} alt="buttonPic" />
                     <p className="mainButtonText">back to main</p>
