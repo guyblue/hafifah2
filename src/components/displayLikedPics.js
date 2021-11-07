@@ -34,3 +34,5 @@ const LikedPicsFrames = () =>{
 
     return newDiv;
 } 
+
+export default LikedPicsFrames;
