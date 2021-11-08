@@ -59,7 +59,7 @@
     //   const whileLoading = () =>{
     //     return new promise((resolve , reject)=>{
     //         if (!pic){
-    //             reject(<CircularProgress />);
+    //             reject(<CircularProgress className="mainPic" />);
     //         }
     //         else{
     //             resolve(<img id="mainPic" className="mainPic" src={pic} alt="mainPic" />);
