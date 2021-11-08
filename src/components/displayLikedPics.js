@@ -5,7 +5,7 @@ import Dislike from '../metirial-pics/dislike.png';
 
 const LikedPicsFrames = () =>{
     const [likedPics , setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
-    const [newDiv , setNewDiv] = useState(0);
+    let [newDiv , setNewDiv] = useState(0);
 
     // const removeFromStorage = (link) => {
     //     let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
