@@ -5,7 +5,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 import LikedPicsTable from './components/displayLikedPics.js';
-import './css-files/LikedPicsPageDesgin.css';
+import './css-files/LikedPicsPageDesign.css';
 
 import buttonPic from './metirial-pics/likes button heart picture.png';
 
