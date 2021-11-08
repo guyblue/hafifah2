@@ -14,6 +14,9 @@
   }
   .likedPicsFrame{
     display: flex;
+    height:200px;
+    width:200px;
+    margin: 10px;
   }
   .likedPicture{
     position: relative;
