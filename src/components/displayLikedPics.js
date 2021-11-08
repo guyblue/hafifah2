@@ -54,10 +54,10 @@ const LikedPicsFrames = () =>{
     return (
         <div className="likedPicsTable">{
             likedPics.map((x)=>{return(
-                <div className="likedPicsFrame" id={x} key={likedPics.indexOf(x)}>
+                <div className="likedPicsFrame" id={"frame/"+x} key={likedPics.indexOf(x)}>
 
-                <img className="likedPicture" id={"picture"+x} src={x} alt="likedPic" />
-                <img className="dislikeButton" id={"dislike"+x} src={Dislike} alt="dislikeButton" onClick={()=>{
+                <img className="likedPicture" id={"picture/"+x} src={x} alt="likedPic" />
+                <img className="dislikeButton" id={"dislike/"+x} src={Dislike} alt="dislikeButton" onClick={()=>{
                     let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
                     changes.splice(changes.indexOf(x), 1);
                     localStorage.setItem('likedPics', JSON.stringify(changes));
