@@ -9,7 +9,7 @@
 
  import heartEmpty from '../metirial-pics/heart.png';
  import heartFull from '../metirial-pics/heart filled.png';
- import pic2 from '../metirial-pics/blackX.png';
+ import blackX from '../metirial-pics/blackX.png';
 
  const SetPic = () => {
       const [pic,setPicture] = useState();
@@ -61,7 +61,7 @@
                     setIsClicked(!isClicked);
                 }} />
                 <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
-                <img id="nextPicButton" className="sideButton" src={pic2} alt="nextPic" onClick={()=>setIsClicked(!isClicked)} />
+                <img id="nextPicButton" className="sideButton" src={blackX} alt="nextPic" onClick={()=>setIsClicked(!isClicked)} />
           </div>
       )
 
