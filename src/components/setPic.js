@@ -16,7 +16,8 @@
       const [pic,setPicture] = useState();
       const [isClicked,setIsClicked] = useState(true);
       const [heartPic , setHeartPic] = useState(heartEmpty);
-      const [isLikeHover, setIsLikeHover] = useState(false);
+      const [isPicDisplay, setIsPicDisplay] = useState(false);
+    //   const [isLikeHover, setIsLikeHover] = useState(false);
     //   const [currPic,setCurrPic] = useState(pic);
 
       useEffect(()=>{
@@ -24,6 +25,7 @@
             .then(res => res.json())
             .then(res => {
                 setPicture(res.message);
+                setIsPicDisplay(true);
             });
             
       },[isClicked]);
@@ -56,27 +58,17 @@
         }
       }
 
-    //   const whileLoading = () =>{
-    //     return new promise((resolve , reject)=>{
-    //         if (!pic){
-    //             reject(<CircularProgress className="mainPic" />);
-    //         }
-    //         else{
-    //             resolve(<img id="mainPic" className="mainPic" src={pic} alt="mainPic" />);
-    //         }
-    //     })
-    //   }
-
       return (
           <div className="mainPicOpt">
                 <img id="likeButton" className="sideButton" src={heartPic} alt="likePic" onClick={()=>{
                     like(true);
-                    setPicture();
+                    setIsPicDisplay(false);
                     setIsClicked(!isClicked);
                 }} />
-                <img id="mainPic" className="mainPic" src={pic} alt="mainPic" />
+                {(isPicDisplay?<img id="mainPic" className="mainPic" src={pic} alt="mainPic" />:<CircularProgress className="mainPic" />)}
+                
                 <img id="nextPicButton" className="sideButton" src={blackX} alt="nextPic" onClick={()=>{
-                    setPicture();
+                    setIsPicDisplay(false);
                     setIsClicked(!isClicked);
                 }} />
           </div>
