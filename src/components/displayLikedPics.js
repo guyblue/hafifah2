@@ -1,11 +1,10 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState } from 'react';
 import '../css-files/LikedPicsPageDesign.css';
 
 import Dislike from '../metirial-pics/dislike.png';
 
 const LikedPicsFrames = () =>{
     const [likedPics , setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
-    let [newDiv , setNewDiv] = useState(0);
 
     // const removeFromStorage = (link) => {
     //     let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
@@ -32,19 +31,23 @@ const LikedPicsFrames = () =>{
 
     return (
         <div className="likedPicsTable">{
-            likedPics.map((x)=>{return(
-                <div className="likedPicsFrame" id={"frame/"+x} key={likedPics.indexOf(x)}>
+                likedPics.map((x)=>{return(
+                        <div className="likedPicsFrame" id={"frame/"+x} key={likedPics.indexOf(x)}>
 
-                <img className="likedPicture" id={"picture/"+x} src={x} alt="likedPic" />
-                <img className="dislikeButton" id={"dislike/"+x} src={Dislike} alt="dislikeButton" onClick={()=>{
-                    let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
-                    changes.splice(changes.indexOf(x), 1);
-                    localStorage.setItem('likedPics', JSON.stringify(changes));
-                    setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
-                }} />
-                
+                            <img className="likedPicture" id={"picture/"+x} src={x} alt="likedPic" />
+                            <img className="dislikeButton" id={"dislike/"+x} src={Dislike} alt="dislikeButton" onClick={()=>{
+                                let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
+                                changes.splice(changes.indexOf(x), 1);
+                                localStorage.setItem('likedPics', JSON.stringify(changes));
+                                setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
+                            }} />
+                            
+                        </div>
+                        )
+                    }
+                )
+            }
             </div>
-            )})}</div>
     );
 } 
 
