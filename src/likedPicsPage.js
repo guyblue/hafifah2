@@ -15,7 +15,7 @@ const LikedPicsPage = () =>{
         <div className="App">
             <h1 className="title">Pictures you liked</h1>
 
-            {/* <LikedPicsTable /> */}
+            <LikedPicsTable />
 
             <Link className="nextSiteLink" to="">
                 <div id="backMainPageButton" className="mainPageButton">

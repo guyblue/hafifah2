@@ -29,10 +29,32 @@ const LikedPicsFrames = () =>{
     //     )
     // }
 
-    useEffect(()=>{
-        setNewDiv(<div className="likedPicsTable">{()=>{
+    // useEffect(()=>{
+    //     setNewDiv(
+    //     <div className="likedPicsTable">{()=>{
+    //         likedPics.map((x)=>{return(
+    //             <div className="likedPicsFrame" id={x}>
+
+    //             <img className="likedPicture" id={"picture"+x} src={x} alt="likedPic" />
+    //             <img className="dislikeButton" id={"dislike"+x} src={Dislike} alt="dislikeButton" onClick={()=>{
+    //                 let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
+    //                 changes.splice(changes.indexOf(x), 1);
+    //                 localStorage.setItem('likedPics', JSON.stringify(changes));
+    //                 setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
+    //             }} />
+                
+    //         </div>
+    //         )});
+    //     }}</div>
+    //     );
+    //     return newDiv;
+    // },[likedPics], {newDiv} );
+
+
+    return (
+        <div className="likedPicsTable">{
             likedPics.map((x)=>{return(
-                <div className="likedPicsFrame" id={x}>
+                <div className="likedPicsFrame" id={x} key={likedPics.indexOf(x)}>
 
                 <img className="likedPicture" id={"picture"+x} src={x} alt="likedPic" />
                 <img className="dislikeButton" id={"dislike"+x} src={Dislike} alt="dislikeButton" onClick={()=>{
@@ -43,13 +65,8 @@ const LikedPicsFrames = () =>{
                 }} />
                 
             </div>
-            )});
-        }}</div>);
-        // return newDiv;
-    },[likedPics], {newDiv} );
-
-
-    return newDiv;
+            )})}</div>
+    );
 } 
 
 export default LikedPicsFrames;
