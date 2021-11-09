@@ -35,12 +35,25 @@
   justify-content: center;
   align-items: center;
 }
+.hidden{
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  align-self: center;
+  opacity:0%;
+}
 .mainPic{
   width: 300px;
   height: 300px;
   border:black solid 2px;
   margin: 5px;
   align-self: center;
+}
+.mainPicDiv{
+  width: 300px !important;
+  height: 300px !important;
+  margin: 5px !important;
+  align-self: center !important;
 }
 .sideButton{
   width: 100px;
