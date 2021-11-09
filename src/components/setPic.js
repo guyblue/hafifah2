@@ -13,7 +13,7 @@
  import blackX from '../metirial-pics/blackX.png';
 
  const SetPic = () => {
-      const [pic,setPicture] = useState();
+      const [pic,setPicture] = useState('/');
       const [isClicked,setIsClicked] = useState(true);
     //   const [heartPic , setHeartPic] = useState(heartEmpty);
       const [isPicDisplay, setIsPicDisplay] = useState(false);
@@ -27,7 +27,8 @@
                 setPicture(res.message);
                 setIsPicDisplay(true);
             });
-            
+            // .then(res => {pic.onLoad =() =>setIsPicDisplay(true)})
+
       },[isClicked]);
 
     //   useEffect(()=>{
@@ -63,12 +64,14 @@
                 <img id="likeButton" className="sideButton" src={(isLikeHover?heartFull:heartEmpty)} alt="likePic" onClick={()=>{
                     like(true);
                     setIsPicDisplay(false);
+                    // setPicture();
                     setIsClicked(!isClicked);
                 }} />
-                {(isPicDisplay?<img  id="mainPic" className="mainPic" src={pic} alt="mainPic" onload='prerender' />:<CircularProgress />)}
+                {(isPicDisplay?<img  id="mainPic" className="mainPic" src={pic} alt="mainPic" />:<CircularProgress />)}
                 
                 <img id="nextPicButton" className="sideButton" src={blackX} alt="nextPic" onClick={()=>{
                     setIsPicDisplay(false);
+                    // setPicture();
                     setIsClicked(!isClicked);
                 }} />
           </div>
