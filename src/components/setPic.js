@@ -18,7 +18,7 @@
     //   const [heartPic , setHeartPic] = useState(heartEmpty);
       const [isPicDisplay, setIsPicDisplay] = useState(false);
       const [isLikeHover, setIsLikeHover] = useState(false);
-    //   const [currPic,setCurrPic] = useState(pic);
+      let [currPic,setCurrPic] = useState();
 
       useEffect(()=>{
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
