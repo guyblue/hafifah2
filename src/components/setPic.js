@@ -65,7 +65,7 @@
                     setIsPicDisplay(false);
                     setIsClicked(!isClicked);
                 }} />
-                {(isPicDisplay?<img id="mainPic" className="mainPic" src={pic} alt="mainPic" />:<CircularProgress />)}
+                {(isPicDisplay?<img  id="mainPic" className="mainPic" src={pic} alt="mainPic" onload='prerender' />:<CircularProgress />)}
                 
                 <img id="nextPicButton" className="sideButton" src={blackX} alt="nextPic" onClick={()=>{
                     setIsPicDisplay(false);
