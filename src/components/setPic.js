@@ -4,7 +4,7 @@
 // you click on the like button
 
 
- import { useEffect, useState ,promise } from 'react';
+ import { useEffect, useState } from 'react';
  import { CircularProgress } from '@mui/material';
  import '../css-files/App.css';
 
@@ -15,9 +15,9 @@
  const SetPic = () => {
       const [pic,setPicture] = useState();
       const [isClicked,setIsClicked] = useState(true);
-      const [heartPic , setHeartPic] = useState(heartEmpty);
+    //   const [heartPic , setHeartPic] = useState(heartEmpty);
       const [isPicDisplay, setIsPicDisplay] = useState(false);
-    //   const [isLikeHover, setIsLikeHover] = useState(false);
+      const [isLikeHover, setIsLikeHover] = useState(false);
     //   const [currPic,setCurrPic] = useState(pic);
 
       useEffect(()=>{
@@ -60,7 +60,7 @@
 
       return (
           <div className="mainPicOpt">
-                <img id="likeButton" className="sideButton" src={heartPic} alt="likePic" onClick={()=>{
+                <img id="likeButton" className="sideButton" src={(isLikeHover?heartFull:heartEmpty)} alt="likePic" onClick={()=>{
                     like(true);
                     setIsPicDisplay(false);
                     setIsClicked(!isClicked);
