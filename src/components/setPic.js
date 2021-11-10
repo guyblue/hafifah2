@@ -1,9 +1,3 @@
-// the function update the new main pic every
-// time the app is update rendering, and add the
-// current main pic into the localStorage everytime
-// you click on the like button
-
-
 import { useEffect, useState } from 'react';
 import { CircularProgress } from '@mui/material';
 import heartEmpty from '../metirial-pics/heart.png';
@@ -14,7 +8,6 @@ import '../css-files/App.css';
 const SetPic = () => {
     const [pic, setPicture] = useState();
     const [isClicked, setIsClicked] = useState(true);
-    //   const [heartPic , setHeartPic] = useState(heartEmpty);
     const [isLikeHover, setIsLikeHover] = useState(false);
     const [nameClass, setNameClass] = useState('hidden');
     const [spinnerNameClass, setSpinnerNameClass] = useState('spinner');
@@ -22,39 +15,28 @@ const SetPic = () => {
     useEffect(() => {
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
             .then(res => res.json())
-            .then(res => {
-                setPicture(res.message);
-            });
-        // you can remove the {} in the setPicture(...);
+            .then(res => setPicture(res.message));
+        // TODO: you can remove the {} in the setPicture(...);--> done
     }, [isClicked]);
 
-    //   useEffect(()=>{
-    //       if(!isLikeHover)
-    //         setHeartPic(heartEmpty);
-    //       else
-    //         setHeartPic(heartFull);
-    //   },[isLikeHover]);
-
-    const like = (isLiked) => {
+    const like = () => {
         // TODO: remove isLiked, because there's no option of the pic not being liked in the func
-        if (isLiked) {
-            // TODO : make the first func into a variable, and put the whole function in !const
-            if ((localStorage.getItem('likedPics')) && (JSON.parse(localStorage.getItem('likedPics')).includes(pic))) {
-                console.log("sorry, that picture is already saved in the liked pictures");
+        // TODO : make the first func into a variable, and put the whole function in !const
+        if ((localStorage.getItem('likedPics')) && (JSON.parse(localStorage.getItem('likedPics')).includes(pic))) {
+            console.log("sorry, that picture is already saved in the liked pictures");
+        }
+        else {
+            if (!localStorage.getItem('likedPics')) {
+                let changes = [];
+                changes.push(pic);
+                localStorage.setItem('likedPics', JSON.stringify(changes));
             }
             else {
-                if (!localStorage.getItem('likedPics')) {
-                    let changes = [];
-                    changes.push(pic);
-                    localStorage.setItem('likedPics', JSON.stringify(changes));
-                }
-                else {
-                    // TODO: change 'changes' name to a more reasonable name, and remove reseting action
-                    let changes = JSON.parse(localStorage.getItem('likedPics'));
-                    changes = [...changes, pic];
-                    localStorage.setItem('likedPics', JSON.stringify(changes));
-                    changes = [];
-                }
+                // TODO: change 'changes' name to a more reasonable name, and remove reseting action
+                let changes = JSON.parse(localStorage.getItem('likedPics'));
+                changes = [...changes, pic];
+                localStorage.setItem('likedPics', JSON.stringify(changes));
+                changes = [];
             }
         }
     }
