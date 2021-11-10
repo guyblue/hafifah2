@@ -26,7 +26,7 @@ function App() {
         <Route path="">
           <div className="App">
 
-            <h1 id="title" className="title">TinDog</h1>
+            <h1 className="title">TinDog</h1>
 
             <div className="Options">
 
