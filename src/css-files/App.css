@@ -16,8 +16,10 @@
 
 
 .Options{
+  position: relative;
   display:flex;
   justify-content: center;
+  left:55px;
 }
 
 
