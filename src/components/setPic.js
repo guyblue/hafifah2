@@ -62,15 +62,13 @@ const SetPic = () => {
                 like(true);
                 changePic();
             }} onMouseEnter={() => {
-                // TODO: use && instead of 'if'
-                if (!isLikeHover)
-                    setIsLikeHover(true);
+                // TODO: use && instead of 'if' --> done
+                    (!isLikeHover) && setIsLikeHover(true);
             }
             }
                 onMouseOut={() => {
-                    // TODO: use && instead of 'if'
-                    if (isLikeHover)
-                        setIsLikeHover(false);
+                    // TODO: use && instead of 'if' --> done
+                    (isLikeHover) && setIsLikeHover(false);
                 }
                 } />
             <div className='mainPicDiv'>
