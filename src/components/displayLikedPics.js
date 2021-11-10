@@ -22,7 +22,7 @@ const LikedPicsFrames = () => {
                     <img className="dislikeButton" id={"dislike/" + x} src={Dislike} alt="dislikeButton" onClick={() => {
                         dislike(x);
                     }} />
-
+{/*TODO: delete id, change alt, remove {} in onClick*/}
                 </div>
             )
         }

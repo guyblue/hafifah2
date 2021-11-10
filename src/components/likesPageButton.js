@@ -16,6 +16,7 @@ const likesPageButtonDiv = () =>{
                 <img className="likesPageButtonPic" src={buttonPic} alt="buttonPic" />
                 <p className="likesButtonText">liked pictures</p>
             </div>
+            {/*TODO: delete div and reorgenize the imports */}
         </Link>
     )
 }
