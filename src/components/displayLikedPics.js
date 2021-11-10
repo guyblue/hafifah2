@@ -15,12 +15,12 @@ const LikedPicsFrames = () => {
 
     return (
         <div className="likedPicsTable">{
-            likedPics.map((x) => 
-                <div className="likedPicsFrame" id={"frame/" + x} key={likedPics.indexOf(x)}>
+            likedPics.map((currPic) => 
+                <div className="likedPicsFrame" key={likedPics.indexOf(currPic)}>
 
-                    <img className="likedPicture" id={"picture/" + x} src={x} alt="likedPic" />
-                    <img className="dislikeButton" id={"dislike/" + x} src={Dislike} alt="dislikeButton" onClick={() => dislike(x)} />
-{/*TODO: delete id, change alt, remove {} in onClick--> onClick removed*/}
+                    <img className="likedPicture" src={currPic} alt="likedPic" />
+                    <img className="dislikeButton" src={Dislike} alt="dislikeButton" onClick={() => dislike(currPic)} />
+{/*TODO: delete id, change alt, remove {} in onClick--> onClick removed, id removed*/}
                 </div>
             )
         }

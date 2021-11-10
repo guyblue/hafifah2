@@ -32,11 +32,10 @@ const SetPic = () => {
                 localStorage.setItem('likedPics', JSON.stringify(changes));
             }
             else {
-                // TODO: change 'changes' name to a more reasonable name, and remove reseting action
+                // TODO: change 'changes' name to a more reasonable name, and remove reseting action -->Done
                 let changes = JSON.parse(localStorage.getItem('likedPics'));
                 changes = [...changes, pic];
                 localStorage.setItem('likedPics', JSON.stringify(changes));
-                changes = [];
             }
         }
     }
