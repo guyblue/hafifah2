@@ -20,7 +20,7 @@ const SetPic = () => {
     }, [isClicked]);
 
     const like = () => {
-        // TODO: remove isLiked, because there's no option of the pic not being liked in the func
+        // TODO: remove isLiked, because there's no option of the pic not being liked in the func-->done
         // TODO : make the first func into a variable, and put the whole function in !const
         if ((localStorage.getItem('likedPics')) && (JSON.parse(localStorage.getItem('likedPics')).includes(pic))) {
             console.log("sorry, that picture is already saved in the liked pictures");
