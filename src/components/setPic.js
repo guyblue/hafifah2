@@ -77,7 +77,16 @@
                 <img id="likeButton" className="sideButton" src={(isLikeHover?heartFull:heartEmpty)} alt="likePic" onClick={()=>{
                     like(true);
                     changePic();
-                }} />
+                }} onMouseEnter={()=>{
+                            if(!isLikeHover)
+                            setIsLikeHover(true);
+                        }
+                    } 
+                    onMouseOut={()=>{
+                            if (isLikeHover)
+                            setIsLikeHover(false);
+                        }
+                    } />
                 <div className='mainPicDiv'>
                     <img  id="mainPic" className={nameClass} src={pic} alt="mainPic" onLoad={()=>setHideSpinner()} />
                     <CircularProgress className={spinnerNameClass}/>
