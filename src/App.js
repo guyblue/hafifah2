@@ -1,16 +1,13 @@
 import './css-files/App.css';
-
-import React from 'react';
-
-import SetPic from './components/SetPic.js';
-import LikedPicsPage from './likedPicsPage.js';
 import {
   BrowserRouter,
   Switch,
   Route
 } from "react-router-dom";
-
+import SetPic from './components/SetPic.js';
+import LikedPicsPage from './likedPicsPage.js';
 import LikesPageButtonDiv from './components/likesPageButton.js';
+import React from 'react';
 
 function App() {
 
