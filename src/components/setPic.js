@@ -16,7 +16,6 @@
       const [pic,setPicture] = useState();
       const [isClicked,setIsClicked] = useState(true);
     //   const [heartPic , setHeartPic] = useState(heartEmpty);
-      const [isPicDisplay, setIsPicDisplay] = useState(false);
       const [isLikeHover, setIsLikeHover] = useState(false);
       const [nameClass , setNameClass] = useState('hidden');
       const [spinnerNameClass , setSpinnerNameClass] = useState('spinner');
@@ -26,9 +25,7 @@
             .then(res => res.json())
             .then(res => {
                 setPicture(res.message);
-                setIsPicDisplay(true);
             });
-            // .then(res => {pic.onLoad =() =>setIsPicDisplay(true)})
 
       },[isClicked]);
 
@@ -61,7 +58,6 @@
       }
 
       const changePic = () =>{
-        setIsPicDisplay(false);
         setShowSpinner();
         setIsClicked(!isClicked);
       }
@@ -83,7 +79,6 @@
                     changePic();
                 }} />
                 <div className='mainPicDiv'>
-                    {/* {(isPicDisplay?:)} */}
                     <img  id="mainPic" className={nameClass} src={pic} alt="mainPic" onLoad={()=>setHideSpinner()} />
                     <CircularProgress className={spinnerNameClass}/>
                     </div>
