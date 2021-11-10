@@ -58,7 +58,7 @@ const SetPic = () => {
     return (
         <div className="mainPicOpt">
             {/*TODO: put img in different lines for every prop */}
-            <img id="likeButton" className="sideButton" src={(isLikeHover ? heartFull : heartEmpty)} alt="likePic" onClick={() => {
+            <img className="sideButton" src={(isLikeHover ? heartFull : heartEmpty)} alt="likePic" onClick={() => {
                 like(true);
                 changePic();
             }} onMouseEnter={() => {
@@ -74,11 +74,11 @@ const SetPic = () => {
                 }
                 } />
             <div className='mainPicDiv'>
-                <img id="mainPic" className={nameClass} src={pic} alt="mainPic" onLoad={() => setHideSpinner()} />
+                <img className={nameClass} src={pic} alt="mainPic" onLoad={() => setHideSpinner()} />
                 <CircularProgress className={spinnerNameClass} />
             </div>
 
-            <img id="nextPicButton" className="sideButton" src={blackX} alt="nextPic" onClick={() => {
+            <img s className="sideButton" src={blackX} alt="nextPic" onClick={() => {
                 // TODO: remove {}
                 changePic();
             }} />
