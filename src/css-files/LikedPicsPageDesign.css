@@ -30,6 +30,7 @@
       width:50px;
       border: black solid 2px;
       opacity: 50%;
+      cursor: pointer;
   }
   .dislikeButton:hover{
     opacity: 100%;
