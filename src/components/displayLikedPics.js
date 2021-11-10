@@ -19,10 +19,8 @@ const LikedPicsFrames = () => {
                 <div className="likedPicsFrame" id={"frame/" + x} key={likedPics.indexOf(x)}>
 
                     <img className="likedPicture" id={"picture/" + x} src={x} alt="likedPic" />
-                    <img className="dislikeButton" id={"dislike/" + x} src={Dislike} alt="dislikeButton" onClick={() => {
-                        dislike(x);
-                    }} />
-{/*TODO: delete id, change alt, remove {} in onClick*/}
+                    <img className="dislikeButton" id={"dislike/" + x} src={Dislike} alt="dislikeButton" onClick={() => dislike(x)} />
+{/*TODO: delete id, change alt, remove {} in onClick--> onClick removed*/}
                 </div>
             )
         }
