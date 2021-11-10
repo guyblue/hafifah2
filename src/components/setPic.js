@@ -76,10 +76,8 @@ const SetPic = () => {
                 <CircularProgress className={spinnerNameClass} />
             </div>
 
-            <img s className="sideButton" src={blackX} alt="nextPic" onClick={() => {
-                // TODO: remove {}
-                changePic();
-            }} />
+            <img s className="sideButton" src={blackX} alt="nextPic" onClick={() =>changePic()} />
+            {/* TODO: remove {} --> done */}
         </div>
     )
 
