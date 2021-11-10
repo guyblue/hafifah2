@@ -76,10 +76,10 @@
 
 
 
-.likesPageButton{
+.nextSiteLink{
   position: relative;
   display: flex;
-  align-items: center;
+  justify-content: center;
   height: 120px;
   width: 120px;
   cursor:pointer;
@@ -92,9 +92,5 @@
 .likesPageButtonPic{
   position: relative;
   height:120px;
-  width: 120px;
-}
-.nextSiteLink{
-  height: 120px;
   width: 120px;
 }

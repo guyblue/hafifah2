@@ -12,7 +12,7 @@ const likesPageButtonDiv = () =>{
     
     return(
         <Link className="nextSiteLink" to="/likedPicsPage.js">
-            <div id="likesPageButtonID" className="likesPageButton">
+            <div id="likesPageButtonID">
                 <img className="likesPageButtonPic" src={buttonPic} alt="buttonPic" />
                 <p className="likesButtonText">liked pictures</p>
             </div>
