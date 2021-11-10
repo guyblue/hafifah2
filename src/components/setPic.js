@@ -59,14 +59,20 @@
             }
         }
       }
+      
+      const setShowSpinner = () =>{
+        setNameClass('hidden');
+        setSpinnerNameClass('spinner');
+      }
 
       return (
           <div className="mainPicOpt">
                 <img id="likeButton" className="sideButton" src={(isLikeHover?heartFull:heartEmpty)} alt="likePic" onClick={()=>{
                     like(true);
                     setIsPicDisplay(false);
-                    setNameClass('hidden');
-                    setSpinnerNameClass('spinner');
+                    setShowSpinner();
+                    // setNameClass('hidden');
+                    // setSpinnerNameClass('spinner');
                     setIsClicked(!isClicked);
                 }} />
                 <div className='mainPicDiv'>
@@ -80,8 +86,9 @@
                 
                 <img id="nextPicButton" className="sideButton" src={blackX} alt="nextPic" onClick={()=>{
                     setIsPicDisplay(false);
-                    setNameClass('hidden');
-                    setSpinnerNameClass('spinner');
+                    setShowSpinner();
+                    // setNameClass('hidden');
+                    // setSpinnerNameClass('spinner');
                     setIsClicked(!isClicked);
                 }} />
           </div>
