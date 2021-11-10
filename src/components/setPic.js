@@ -59,37 +59,37 @@
             }
         }
       }
+
+      const changePic = () =>{
+        setIsPicDisplay(false);
+        setShowSpinner();
+        setIsClicked(!isClicked);
+      }
       
       const setShowSpinner = () =>{
         setNameClass('hidden');
         setSpinnerNameClass('spinner');
       }
 
+      const setHideSpinner = () =>{
+        setNameClass('mainPic');
+        setSpinnerNameClass('hidden');
+      }
+
       return (
           <div className="mainPicOpt">
                 <img id="likeButton" className="sideButton" src={(isLikeHover?heartFull:heartEmpty)} alt="likePic" onClick={()=>{
                     like(true);
-                    setIsPicDisplay(false);
-                    setShowSpinner();
-                    // setNameClass('hidden');
-                    // setSpinnerNameClass('spinner');
-                    setIsClicked(!isClicked);
+                    changePic();
                 }} />
                 <div className='mainPicDiv'>
                     {/* {(isPicDisplay?:)} */}
-                    <img  id="mainPic" className={nameClass} src={pic} alt="mainPic" onLoad={()=>{
-                        setNameClass('mainPic');
-                        setSpinnerNameClass('hidden');
-                        }} />
+                    <img  id="mainPic" className={nameClass} src={pic} alt="mainPic" onLoad={()=>setHideSpinner()} />
                     <CircularProgress className={spinnerNameClass}/>
                     </div>
                 
                 <img id="nextPicButton" className="sideButton" src={blackX} alt="nextPic" onClick={()=>{
-                    setIsPicDisplay(false);
-                    setShowSpinner();
-                    // setNameClass('hidden');
-                    // setSpinnerNameClass('spinner');
-                    setIsClicked(!isClicked);
+                    changePic();
                 }} />
           </div>
       )
