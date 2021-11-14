@@ -7,7 +7,7 @@ import {
 import MainPage from './mainPage.jsx';
 import LikedPicsPage from './likedPicsPage.jsx';
 
-function App() {
+const App = () => {
 
   return (
     <BrowserRouter>
