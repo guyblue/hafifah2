@@ -4,8 +4,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import MainPage from '../mainPage.jsx';
-import LikedPicsPage from '../likedPicsPage.jsx';
+import MainPage from '../pages/mainPage.jsx';
+import LikedPicsPage from '../pages/likedPicsPage.jsx';
 
 const SetPage = () =>{
     return (
