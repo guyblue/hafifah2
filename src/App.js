@@ -4,10 +4,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import SetPic from './components/SetPic.js';
+import MainPage from './mainPage.jsx';
 import LikedPicsPage from './likedPicsPage.js';
-import LikesPageButtonDiv from './components/likesPageButton.js';
-import './css-files/App.css';
 
 function App() {
 
@@ -21,7 +19,8 @@ function App() {
         </Route>
 
         <Route path="">
-          <div className="App">
+          <MainPage />
+          {/* <div className="App">
 
             <h1 className="title">TinDog</h1>
 
@@ -32,7 +31,7 @@ function App() {
 
             </div>
 
-          </div>
+          </div> */}
         </Route>
 
       </Switch>
