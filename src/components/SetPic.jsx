@@ -22,22 +22,17 @@ const SetPic = () => {
     const like = () => {
         // TODO: remove isLiked, because there's no option of the pic not being liked in the func-->done
         // TODO : make the first func into a variable, and put the whole function in !const
-        if ((localStorage.getItem('likedPics')) && (JSON.parse(localStorage.getItem('likedPics')).includes(pic))) {
-            console.log("sorry, that picture is already saved in the liked pictures");
-        }
-        else {
-            if (!localStorage.getItem('likedPics')) {
+        if (!localStorage.getItem('likedPics')) {
                 let changes = [];
                 changes.push(pic);
                 localStorage.setItem('likedPics', JSON.stringify(changes));
             }
-            else {
+        else if (!((localStorage.getItem('likedPics')) && (JSON.parse(localStorage.getItem('likedPics')).includes(pic)))){
                 // TODO: change 'changes' name to a more reasonable name, and remove reseting action -->Done
                 let changes = JSON.parse(localStorage.getItem('likedPics'));
                 changes = [...changes, pic];
                 localStorage.setItem('likedPics', JSON.stringify(changes));
             }
-        }
     }
 
     const changePic = () => {
