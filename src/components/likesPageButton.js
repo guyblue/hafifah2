@@ -6,7 +6,7 @@ import '../css-files/App.css';
 const likesPageButtonDiv = () => {
 
     return (
-        <Link className="nextSiteLink" to="/likedPicsPage.js">
+        <Link className="nextSiteLink" to="/likedPicsPage.jsx">
             <img className="likesPageButtonPic" src={buttonPic} alt="buttonPic" />
             <p className="likesButtonText">liked pictures</p>
             {/*TODO: delete div and reorgenize the imports --> fixed*/}

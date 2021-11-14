@@ -5,7 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import MainPage from './mainPage.jsx';
-import LikedPicsPage from './likedPicsPage.js';
+import LikedPicsPage from './likedPicsPage.jsx';
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
 
       <Switch>
 
-        <Route path="/likedPicsPage.js">
+        <Route path="/likedPicsPage.jsx">
           <LikedPicsPage />
         </Route>
 
