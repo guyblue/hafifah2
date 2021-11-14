@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import Dislike from '../metirial-pics/dislike.png';
 import '../css-files/LikedPicsPage.css';
 
-import Dislike from '../metirial-pics/dislike.png';
+
 
 const LikedPicsFrames = () => {
     const [likedPics, setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
