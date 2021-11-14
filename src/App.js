@@ -1,4 +1,4 @@
-import './css-files/App.css';
+import React from 'react';
 import {
   BrowserRouter,
   Switch,
@@ -7,7 +7,7 @@ import {
 import SetPic from './components/SetPic.js';
 import LikedPicsPage from './likedPicsPage.js';
 import LikesPageButtonDiv from './components/likesPageButton.js';
-import React from 'react';
+import './css-files/App.css';
 
 function App() {
 
