@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import buttonPic from '../metirial-pics/likes button heart picture.png';
+import buttonPic from '../metirial-pics/LikesButtonHeartPicture.png';
 import '../css-files/mainPage.css';
 
 const likesPageButtonDiv = () => {
