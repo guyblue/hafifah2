@@ -10,11 +10,11 @@ const SetLikedPic = ({pic , pos}) =>{
         let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
         changes.splice(changes.indexOf(link), 1);
         localStorage.setItem('likedPics', JSON.stringify(changes));
-        setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
+        // setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
     }
 
     return(
-        <div className="likedPicsFrame" key={pos}>
+        <div className="likedPicsFrame">
 
         <img className="likedPicture" src={pic} alt="the_Liked_Pic_Was_Not_Loading" />
         <div>
