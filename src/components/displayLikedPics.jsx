@@ -14,7 +14,8 @@ const LikedPicsFrames = () => {
     }
 
     return (
-        <div className="likedPicsTable">{
+        ((!likedPics)?<p>no pictures have been liked yet</p>
+        :<div className="likedPicsTable">{
             likedPics.map((currPic) => 
                 <div className="likedPicsFrame" key={likedPics.indexOf(currPic)}>
 
@@ -25,6 +26,7 @@ const LikedPicsFrames = () => {
             )
         }
         </div>
+        )
     );
 }
 
