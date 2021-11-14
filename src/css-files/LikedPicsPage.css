@@ -28,12 +28,12 @@
       height:40px;
       width:40px;
       border: 1px black solid;
-      opacity: 100%;
+      opacity: 25%;
       cursor: pointer;
   }
-  /* .dislikeButton:hover{
+  .dislikeButton:hover{
     opacity: 100%;
-  } */
+  }
 
 
   .hidden{
