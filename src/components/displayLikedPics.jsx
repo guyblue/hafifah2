@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css-files/LikedPicsPageDesign.css';
+import '../css-files/LikedPicsPage.css';
 
 import Dislike from '../metirial-pics/dislike.png';
 
