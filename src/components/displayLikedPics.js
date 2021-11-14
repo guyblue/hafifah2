@@ -18,9 +18,9 @@ const LikedPicsFrames = () => {
             likedPics.map((currPic) => 
                 <div className="likedPicsFrame" key={likedPics.indexOf(currPic)}>
 
-                    <img className="likedPicture" src={currPic} alt="likedPic" />
-                    <img className="dislikeButton" src={Dislike} alt="dislikeButton" onClick={() => dislike(currPic)} />
-{/*TODO: delete id, change alt, remove {} in onClick--> onClick removed, id removed*/}
+                    <img className="likedPicture" src={currPic} alt="the_Liked_Pic_Was_Not_Loading" />
+                    <img className="dislikeButton" src={Dislike} alt="Dislike_Button_Pic_Was_Not_Loading" onClick={() => dislike(currPic)} />
+{/*TODO: delete id, change alt, remove {} in onClick--> fixed*/}
                 </div>
             )
         }
