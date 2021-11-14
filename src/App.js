@@ -20,18 +20,6 @@ function App() {
 
         <Route path="">
           <MainPage />
-          {/* <div className="App">
-
-            <h1 className="title">TinDog</h1>
-
-            <div className="Options">
-
-              <SetPic />
-              <LikesPageButtonDiv />
-
-            </div>
-
-          </div> */}
         </Route>
 
       </Switch>
