@@ -9,8 +9,7 @@ const SetPic = () => {
     const [pic, setPicture] = useState();
     const [isClicked, setIsClicked] = useState(true);
     const [isLikeHover, setIsLikeHover] = useState(false);
-    const [nameClass, setNameClass] = useState('hidden');
-    const [spinnerNameClass, setSpinnerNameClass] = useState('spinner');
+    const [isPicLoading , setIsPicLoading] = useState(true);
 
     useEffect(() => {
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
@@ -41,18 +40,8 @@ const SetPic = () => {
     }
 
     const changePic = () => {
-        setShowSpinner();
+        setIsPicLoading(true);
         setIsClicked(!isClicked);
-    }
-
-    const setShowSpinner = () => {
-        setNameClass('hidden');
-        setSpinnerNameClass('spinner');
-    }
-
-    const setHideSpinner = () => {
-        setNameClass('mainPic');
-        setSpinnerNameClass('hidden');
     }
 
     return (
@@ -70,8 +59,8 @@ const SetPic = () => {
             />
                  {/* TODO: use && instead of 'if' --> done */}
             <div className='mainPicDiv'>
-                <img className={nameClass} src={pic} alt="mainPic" onLoad={() => setHideSpinner()} />
-                <CircularProgress className={spinnerNameClass} />
+                <img className={(isPicLoading?'hidden':'mainPic')} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
+                <CircularProgress className={((!isPicLoading)?'hidden':'spinner')} />
             </div>
 
             <img s className="sideButton" src={blackX} alt="nextPic" onClick={() =>changePic()} />
