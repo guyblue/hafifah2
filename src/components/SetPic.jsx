@@ -3,7 +3,7 @@ import { CircularProgress } from '@mui/material';
 import heartEmpty from '../metirial-pics/heart.png';
 import heartFull from '../metirial-pics/heart filled.png';
 import blackX from '../metirial-pics/blackX.png';
-import '../css-files/App.css';
+import '../css-files/mainPage.css';
 
 const SetPic = () => {
     const [pic, setPicture] = useState();
