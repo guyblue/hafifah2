@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-// import { Favorite , FavoriteBorder } from '@mui/icons-material';
+import { Favorite , FavoriteBorder } from '@mui/icons-material';
+import SetLikedPic from './SetLikedPic.jsx';
 import Dislike from '../metirial-pics/dislike.png';
 import '../css-files/LikedPicsPage.css';
 
@@ -20,20 +21,11 @@ const LikedPicsFrames = () => {
         ((!likedPics.length)?<p>no pictures have been liked yet</p>
         :<div className="likedPicsTable">{
             likedPics.map((currPic) => 
-                <div className="likedPicsFrame" key={likedPics.indexOf(currPic)}>
-
-                    <img className="likedPicture" src={currPic} alt="the_Liked_Pic_Was_Not_Loading" />
-                    {/* <div>
-                        <Favorite 
-                        className={((!isDislikeHover)?"dislikeButton":"hidden")}
-                        onMouseEnter={() =>(!isDislikeHover) && setIsLikeHover(true)}
-                        onMouseOut={() =>(isDislikeHover) && setIsLikeHover(false)} />
-                        <FavoriteBorder 
-                        className={(isDislikeHover?"dislikeButton":"hidden")} />
-                    </div> */}
-                    <img className="dislikeButton" src={Dislike} alt="Dislike_Button_Pic_Was_Not_Loading" onClick={() => dislike(currPic)} />
-{/*TODO: delete id, change alt, remove {} in onClick--> fixed*/}
-                </div>
+                <SetLikedPic
+                pic={currPic}
+                pos={likedPics.indexOf(currPic)}
+                key={`link/${likedPics.indexOf(currPic)}`}
+                />
             )
         }
         </div>
