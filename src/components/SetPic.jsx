@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CircularProgress } from '@mui/material';
 import heartEmpty from '../metirial-pics/heart.png';
-import heartFull from '../metirial-pics/heart filled.png';
+import heartFull from '../metirial-pics/HeartFilled.png';
 import blackX from '../metirial-pics/blackX.png';
 import '../css-files/mainPage.css';
 
