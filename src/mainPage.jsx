@@ -1,6 +1,6 @@
 import React from 'react';
-import SetPic from './components/SetPic.js';
-import LikesPageButtonDiv from './components/likesPageButton.js';
+import SetPic from './components/SetPic.jsx';
+import LikesPageButtonDiv from './components/likesPageButton.jsx';
 import './css-files/App.css';
 
 const MainPage = () =>{
