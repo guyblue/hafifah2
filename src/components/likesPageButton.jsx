@@ -14,7 +14,7 @@ const likesPageButtonDiv = () => {
             <p className="likesButtonText">liked pictures</p>
         </Link>
     )
-    // TODO: replace next site button pic to an MUI icon
+    // TODO: replace next site button pic to an MUI icon-->done
 }
 
 export default likesPageButtonDiv;
