@@ -1,4 +1,4 @@
-import React, { useState ,useEffect } from 'react';
+import React, { useState } from 'react';
 import SetLikedPic from './SetLikedPic.jsx';
 import '../css-files/LikedPicsPage.css';
 
@@ -13,10 +13,6 @@ const LikedPicsFrames = () => {
         localStorage.setItem('likedPics', JSON.stringify(changes));
         setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
     }
-
-    useEffect (()=>{
-        setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
-    },[]);
 
     return (
         ((!likedPics.length)?<p>no pictures have been liked yet</p>
