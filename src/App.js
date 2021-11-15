@@ -1,10 +1,10 @@
 import React from 'react';
-import SetPage from './components/setPage.jsx';
+import Router from './components/Router.jsx';
 
 const App = () => {
 
   return (
-    <SetPage />
+    <Router />
   );
 }
 

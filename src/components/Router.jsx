@@ -7,11 +7,11 @@ import {
 import MainPage from '../pages/mainPage.jsx';
 import LikedPicsPage from '../pages/likedPicsPage.jsx';
 
-const SetPage = () =>{
+const Router = () =>{
     return (
         <BrowserRouter>
         <Switch>
-          <Route path="/likedPicsPage.jsx">
+          <Route path="/likedPicsPage">
             <LikedPicsPage />
           </Route>
           <Route path="">
@@ -19,9 +19,9 @@ const SetPage = () =>{
           </Route>
         </Switch>
       </BrowserRouter>
-      // TODO: change name to router
-      // TODO: remove the jsx in the Router's link
+      // TODO: change name to router-->done
+      // TODO: remove the jsx in the Router's link-->done
     );
 }
 
-export default SetPage;
+export default Router;
