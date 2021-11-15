@@ -19,6 +19,8 @@ const SetPage = () =>{
           </Route>
         </Switch>
       </BrowserRouter>
+      // TODO: change name to router
+      // TODO: remove the jsx in the Router's link
     );
 }
 

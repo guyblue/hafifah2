@@ -15,12 +15,9 @@ const SetPic = () => {
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
             .then(res => res.json())
             .then(res => setPicture(res.message));
-        // TODO: you can remove the {} in the setPicture(...);--> done
     }, [isClicked]);
 
     const like = () => {
-        // TODO: remove isLiked, because there's no option of the pic not being liked in the func-->done
-        // TODO : make the first func into a variable, and put the whole function in !const-->done
         const isExistsInLS = !!localStorage.getItem('likedPics');
         if (!isExistsInLS) {
             let changes = [];
@@ -30,7 +27,7 @@ const SetPic = () => {
         else {
             const isAlreadyLiked = (JSON.parse(localStorage.getItem('likedPics')).includes(pic));
             if (!isAlreadyLiked) {
-                // TODO: change 'changes' name to a more reasonable name, and remove reseting action -->Done
+                // TODO: change 'changes' name to a more reasonable like newArray
                 let changes = JSON.parse(localStorage.getItem('likedPics'));
                 changes = [...changes, pic];
                 localStorage.setItem('likedPics', JSON.stringify(changes));
@@ -42,10 +39,10 @@ const SetPic = () => {
         setIsPicLoading(true);
         setIsClicked(!isClicked);
     }
+    // TODO:rename isClicked to shouldRefetch
 
     return (
         <div className="mainPicOpt">
-            {/*TODO: put img in different lines for every prop --> done */}
             <img
                 className="sideButton"
                 src={(isLikeHover ? heartFull : heartEmpty)}
@@ -56,14 +53,12 @@ const SetPic = () => {
                 onMouseEnter={() => (!isLikeHover) && setIsLikeHover(true)}
                 onMouseOut={() => (isLikeHover) && setIsLikeHover(false)}
             />
-            {/* TODO: use && instead of 'if' --> done */}
             <div className='mainPicDiv'>
                 <img className={(isPicLoading ? 'hidden' : 'mainPic')} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
                 <CircularProgress className={((!isPicLoading) ? 'hidden' : 'spinner')} />
             </div>
 
             <img className="sideButton" src={blackX} alt="nextPic" onClick={() => changePic()} />
-            {/* TODO: remove {} --> done */}
         </div>
     )
 }
