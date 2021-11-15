@@ -28,19 +28,11 @@
       height:40px !important;
       width:40px !important;
       border: 1px black solid !important;
-      opacity: 100%;
       cursor: pointer !important;
   }
-  /* .dislikeButton:hover{
-    opacity: 100%;
-  } */
-
-
-  .hidden{
-    width: 300px !important;
-    height: 300px !important;
-    opacity:0%;
-    position: absolute !important;
+  .dislikeIcon{
+    height:40px !important;
+    width:40px !important;
   }
 
   .mainPageButton{
