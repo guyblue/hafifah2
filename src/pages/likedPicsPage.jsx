@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { Favorite } from '@mui/icons-material';
+import { pink } from '@mui/material/colors';
 import LikedPicsTable from '../components/displayLikedPics.jsx';
-import buttonPic from '../metirial-pics/LikesButtonHeartPicture.png';
 import '../css-files/LikedPicsPage.css';
 
 const LikedPicsPage = () =>{
@@ -10,12 +11,12 @@ const LikedPicsPage = () =>{
             <h1 className="title">Pictures you liked</h1>
             <LikedPicsTable />
             <Link className="mainPageButton" to="">
-                    <img className="mainPageButtonPic" src={buttonPic} alt="buttonPic" />
+            <Favorite className="mainPageButtonPic" sx={{color: pink[500] }} />
                     <p className="mainButtonText">back to main</p>
             </Link>
         </div>
     )
-    // TODO: replace prev page pic with MUI icon
+    // TODO: replace prev page pic with MUI icon-->done
 }
 
 export default LikedPicsPage;

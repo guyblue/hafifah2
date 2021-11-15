@@ -50,10 +50,10 @@
   .mainButtonText{
     position:absolute;
     top:20%;
-    left:10%;
+    left:15%;
   }
   .mainPageButtonPic{
-    position: relative;
-    height:120px;
-    width: 120px;
+    position: relative !important;
+    height:130px !important;
+    width: 130px !important;
   }
