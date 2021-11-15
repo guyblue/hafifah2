@@ -8,7 +8,6 @@
   position: relative;
   display:flex;
   justify-content: center;
-  left:55px;
 }
 
 
@@ -25,6 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  left:55px;
 }
 .hidden{
   width: 300px;
@@ -72,6 +72,7 @@
   height: 120px;
   width: 120px;
   cursor:pointer;
+  left:55px;
 }
 .likesButtonText{
   position:absolute;
