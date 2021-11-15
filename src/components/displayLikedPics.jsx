@@ -19,7 +19,7 @@ const LikedPicsFrames = () => {
 
     useEffect (()=>{
         setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
-    },[JSON.parse(localStorage.getItem('likedPics'))]);
+    },[]);
 
     return (
         ((!likedPics.length)?<p>no pictures have been liked yet</p>
@@ -27,7 +27,7 @@ const LikedPicsFrames = () => {
             likedPics.map((currPic) => 
                 <SetLikedPic
                 pic={currPic}
-                pos={likedPics.indexOf(currPic)}
+                dislike={dislike}
                 key={`link/${likedPics.indexOf(currPic)}`}
                 />
             )
