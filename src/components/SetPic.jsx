@@ -20,17 +20,17 @@ const SetPic = () => {
     const like = () => {
         const isExistsInLS = !!localStorage.getItem('likedPics');
         if (!isExistsInLS) {
-            let changes = [];
-            changes.push(pic);
-            localStorage.setItem('likedPics', JSON.stringify(changes));
+            let newStorageArray = [];
+            newStorageArray.push(pic);
+            localStorage.setItem('likedPics', JSON.stringify(newStorageArray));
         }
         else {
             const isAlreadyLiked = (JSON.parse(localStorage.getItem('likedPics')).includes(pic));
             if (!isAlreadyLiked) {
-                // TODO: change 'changes' name to a more reasonable like newArray
-                let changes = JSON.parse(localStorage.getItem('likedPics'));
-                changes = [...changes, pic];
-                localStorage.setItem('likedPics', JSON.stringify(changes));
+                // TODO: change 'changes' name to a more reasonable like newArray-->done
+                let newStorageArray = JSON.parse(localStorage.getItem('likedPics'));
+                newStorageArray = [...newStorageArray, pic];
+                localStorage.setItem('likedPics', JSON.stringify(newStorageArray));
             }
         }
     }
