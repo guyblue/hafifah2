@@ -1,14 +1,11 @@
 import React, { useState ,useEffect } from 'react';
-import { Favorite , FavoriteBorder } from '@mui/icons-material';
 import SetLikedPic from './SetLikedPic.jsx';
-import Dislike from '../metirial-pics/dislike.png';
 import '../css-files/LikedPicsPage.css';
 
 
 
 const LikedPicsFrames = () => {
     const [likedPics, setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
-    const [isDislikeHover , setIsDislikeHover] = useState(false);
 
     const dislike = (link) =>{
         let changes = [...JSON.parse(localStorage.getItem('likedPics'))];
