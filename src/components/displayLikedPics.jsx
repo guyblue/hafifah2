@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect } from 'react';
 import { Favorite , FavoriteBorder } from '@mui/icons-material';
 import SetLikedPic from './SetLikedPic.jsx';
 import Dislike from '../metirial-pics/dislike.png';
@@ -16,6 +16,10 @@ const LikedPicsFrames = () => {
         localStorage.setItem('likedPics', JSON.stringify(changes));
         setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
     }
+
+    useEffect (()=>{
+        setLikedPics(JSON.parse(localStorage.getItem('likedPics')));
+    },[JSON.parse(localStorage.getItem('likedPics'))]);
 
     return (
         ((!likedPics.length)?<p>no pictures have been liked yet</p>
