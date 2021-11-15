@@ -15,6 +15,7 @@ const LikedPicsPage = () =>{
             </Link>
         </div>
     )
+    // TODO: replace prev page pic with MUI icon
 }
 
 export default LikedPicsPage;

@@ -61,6 +61,7 @@ const SetPic = () => {
             <img className="sideButton" src={blackX} alt="nextPic" onClick={() => changePic()} />
         </div>
     )
+    // TODO: change the like button and next (blackX) button with MUI icons
 }
 
 export default SetPic;
