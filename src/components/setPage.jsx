@@ -10,17 +10,13 @@ import LikedPicsPage from '../pages/likedPicsPage.jsx';
 const SetPage = () =>{
     return (
         <BrowserRouter>
-
         <Switch>
-  
           <Route path="/likedPicsPage.jsx">
             <LikedPicsPage />
           </Route>
-  
           <Route path="">
             <MainPage />
           </Route>
-  
         </Switch>
       </BrowserRouter>
     );

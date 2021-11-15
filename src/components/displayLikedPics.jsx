@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import SetLikedPic from './SetLikedPic.jsx';
 import '../css-files/LikedPicsPage.css';
 
-
-
 const LikedPicsFrames = () => {
     const [likedPics, setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
 

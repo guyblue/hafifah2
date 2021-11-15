@@ -9,7 +9,7 @@ const SetPic = () => {
     const [pic, setPicture] = useState();
     const [isClicked, setIsClicked] = useState(true);
     const [isLikeHover, setIsLikeHover] = useState(false);
-    const [isPicLoading , setIsPicLoading] = useState(true);
+    const [isPicLoading, setIsPicLoading] = useState(true);
 
     useEffect(() => {
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
@@ -22,21 +22,20 @@ const SetPic = () => {
         // TODO: remove isLiked, because there's no option of the pic not being liked in the func-->done
         // TODO : make the first func into a variable, and put the whole function in !const-->done
         const isExistsInLS = !!localStorage.getItem('likedPics');
-        if (!isExistsInLS){
-                let changes = [];
-                changes.push(pic);
-                localStorage.setItem('likedPics', JSON.stringify(changes));
+        if (!isExistsInLS) {
+            let changes = [];
+            changes.push(pic);
+            localStorage.setItem('likedPics', JSON.stringify(changes));
         }
-        else{
-                const isAlreadyLiked = (JSON.parse(localStorage.getItem('likedPics')).includes(pic));
-                if (!isAlreadyLiked){
-                    // TODO: change 'changes' name to a more reasonable name, and remove reseting action -->Done
-                    let changes = JSON.parse(localStorage.getItem('likedPics'));
-                    changes = [...changes, pic];
-                    localStorage.setItem('likedPics', JSON.stringify(changes));
-                }
+        else {
+            const isAlreadyLiked = (JSON.parse(localStorage.getItem('likedPics')).includes(pic));
+            if (!isAlreadyLiked) {
+                // TODO: change 'changes' name to a more reasonable name, and remove reseting action -->Done
+                let changes = JSON.parse(localStorage.getItem('likedPics'));
+                changes = [...changes, pic];
+                localStorage.setItem('likedPics', JSON.stringify(changes));
             }
-
+        }
     }
 
     const changePic = () => {
@@ -47,28 +46,26 @@ const SetPic = () => {
     return (
         <div className="mainPicOpt">
             {/*TODO: put img in different lines for every prop --> done */}
-            <img 
-            className="sideButton" 
-            src={(isLikeHover ? heartFull : heartEmpty)} 
-            alt="likePic" onClick={() => {
-                like(true);
-                changePic();
-            }} 
-            onMouseEnter={() =>(!isLikeHover) && setIsLikeHover(true)}
-            onMouseOut={() =>(isLikeHover) && setIsLikeHover(false)} 
+            <img
+                className="sideButton"
+                src={(isLikeHover ? heartFull : heartEmpty)}
+                alt="likePic" onClick={() => {
+                    like(true);
+                    changePic();
+                }}
+                onMouseEnter={() => (!isLikeHover) && setIsLikeHover(true)}
+                onMouseOut={() => (isLikeHover) && setIsLikeHover(false)}
             />
-                 {/* TODO: use && instead of 'if' --> done */}
+            {/* TODO: use && instead of 'if' --> done */}
             <div className='mainPicDiv'>
-                <img className={(isPicLoading?'hidden':'mainPic')} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
-                <CircularProgress className={((!isPicLoading)?'hidden':'spinner')} />
+                <img className={(isPicLoading ? 'hidden' : 'mainPic')} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
+                <CircularProgress className={((!isPicLoading) ? 'hidden' : 'spinner')} />
             </div>
 
-            <img className="sideButton" src={blackX} alt="nextPic" onClick={() =>changePic()} />
+            <img className="sideButton" src={blackX} alt="nextPic" onClick={() => changePic()} />
             {/* TODO: remove {} --> done */}
         </div>
     )
-
-
 }
 
 export default SetPic;
