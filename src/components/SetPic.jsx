@@ -7,7 +7,7 @@ import '../css-files/mainPage.css';
 
 const SetPic = () => {
     const [pic, setPicture] = useState();
-    const [isClicked, setIsClicked] = useState(true);
+    const [shouldRefetch, setShouldRefetch] = useState(true);
     const [isLikeHover, setIsLikeHover] = useState(false);
     const [isPicLoading, setIsPicLoading] = useState(true);
 
@@ -15,7 +15,7 @@ const SetPic = () => {
         fetch('https://dog.ceo/api/breed/germanshepherd/images/random')
             .then(res => res.json())
             .then(res => setPicture(res.message));
-    }, [isClicked]);
+    }, [shouldRefetch]);
 
     const like = () => {
         const isExistsInLS = !!localStorage.getItem('likedPics');
@@ -37,9 +37,9 @@ const SetPic = () => {
 
     const changePic = () => {
         setIsPicLoading(true);
-        setIsClicked(!isClicked);
+        setShouldRefetch(!shouldRefetch);
     }
-    // TODO:rename isClicked to shouldRefetch
+    // TODO:rename isClicked to shouldRefetch-->done
 
     return (
         <div className="mainPicOpt">
