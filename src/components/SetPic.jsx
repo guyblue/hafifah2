@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { CircularProgress } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import heartEmpty from '../metirial-pics/heart.png';
 import heartFull from '../metirial-pics/HeartFilled.png';
-import blackX from '../metirial-pics/blackX.png';
 import '../css-files/mainPage.css';
 
 const SetPic = () => {
@@ -57,11 +57,13 @@ const SetPic = () => {
                 <img className={(isPicLoading ? 'hidden' : 'mainPic')} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
                 <CircularProgress className={((!isPicLoading) ? 'hidden' : 'spinner')} />
             </div>
-
-            <img className="sideButton" src={blackX} alt="nextPic" onClick={() => changePic()} />
+            
+            <div className="sideButton">
+                <CloseIcon sx={{ fontSize: 140 }} onClick={() => changePic()} />
+            </div>
         </div>
     )
-    // TODO: change the like button and next (blackX) button with MUI icons
+    // TODO: change the like button and next (blackX) button with MUI icons-->done
 }
 
 export default SetPic;
