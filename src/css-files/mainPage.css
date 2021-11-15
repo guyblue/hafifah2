@@ -69,18 +69,18 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 120px;
-  width: 120px;
+  height: 130px;
+  width: 130px;
   cursor:pointer;
   left:55px;
 }
 .likesButtonText{
   position:absolute;
   top:20%;
-  left:10%;
+  left:14%;
 }
 .likesPageButtonPic{
-  position: relative;
-  height:120px;
-  width: 120px;
+  position: relative !important;
+  height:130px !important;
+  width: 130px !important;
 }
