@@ -10,7 +10,7 @@ const SetLikedPic = ({ pic, dislike }) => {
             <img className="likedPicture" src={pic} alt="pic_Not_Loading" />
             <div className="dislikeButton"
                 onMouseOver={() => (!isDislikeHover) && setIsDislikeHover(true)}
-                onMouseOut={() => (isDislikeHover) && setIsDislikeHover(false)}
+                onMouseLeave={() => (isDislikeHover) && setIsDislikeHover(false)}
             >
                 {(isDislikeHover ?
                     <FavoriteBorder className="dislikeIcon" onClick={() => dislike(pic)} /> :
