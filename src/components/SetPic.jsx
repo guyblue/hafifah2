@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CircularProgress } from '@mui/material';
 import { Close, FavoriteBorder, FavoriteTwoTone } from '@mui/icons-material';
-import heartEmpty from '../metirial-pics/heart.png';
-import heartFull from '../metirial-pics/HeartFilled.png';
 import '../css-files/mainPage.css';
 
 const SetPic = () => {
@@ -50,16 +48,6 @@ const SetPic = () => {
                 onMouseOver={() => (!isLikeHover) && setIsLikeHover(true)}
                 onMouseLeave={() => (isLikeHover) && setIsLikeHover(false)}
             >
-                {/* <img
-                className="sideButton"
-                src={(isLikeHover ? heartFull : heartEmpty)}
-                alt="likePic" onClick={() => {
-                    like(true);
-                    changePic();
-                }}
-                onMouseEnter={() => (!isLikeHover) && setIsLikeHover(true)}
-                onMouseOut={() => (isLikeHover) && setIsLikeHover(false)}
-            /> */}
                 {(isLikeHover ? <FavoriteTwoTone
                     sx={{ fontSize: 120 }}
                     onClick={() => {
