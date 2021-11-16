@@ -82,10 +82,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 25vmin;
-  width: 25vmin;
+  height: 25vmin !important;
+  width: 25vmin !important;
   cursor:pointer;
-  left:12vh;
+  left:12vmin !important;
 }
 .likesButtonText{
   position:absolute;

@@ -8,7 +8,7 @@ const likesPageButtonDiv = () => {
 
     return (
         <Link className="nextSiteLink" to="/likedPicsPage">
-            <Favorite className="likesPageButtonPic" sx={{color: pink[500] }} />
+            <Favorite className="likesPageButtonPic" sx={{color: pink[500] , fontSize: '25vmin'}} />
             <p className="likesButtonText">liked pictures</p>
         </Link>
     )
