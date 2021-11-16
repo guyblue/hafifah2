@@ -1,10 +1,11 @@
 .App {
     text-align: center;
+    --main-color: blue;
   }
 
   .title{
     background-color: #61dafb;
-    outline: solid blue 2px;
+    outline: solid var(--main-color) 2px;
   }
 
 
@@ -21,20 +22,20 @@
     
   }
   .likedPicture{
-    height:200px;
-    width:200px;
+    height:40vmin;
+    width:40vmin;
     outline: black solid 5px;
   }
   .dislikeButton{
       position: absolute !important;
-      height:40px !important;
-      width:40px !important;
+      height:7vmin !important;
+      width:7vmin !important;
       border: 1px black solid !important;
       cursor: pointer !important;
   }
   .dislikeIcon{
-    height:40px !important;
-    width:40px !important;
+    height:7vmin !important;
+    width:7vmin !important;
   }
 
 
