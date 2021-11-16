@@ -1,11 +1,15 @@
 .App {
     text-align: center;
-    --main-color: blue;
+    --title-outline: blue;
+    --title-background: #61dafb;
+    --components-black-outline: black;
+    --dislike-color:crimson;
+    --heart-color:pink;
   }
 
   .title{
-    background-color: #61dafb;
-    outline: solid var(--main-color) 2px;
+    background-color: var(--title-background);
+    outline: solid var(--title-outline) 2px;
   }
 
 
@@ -16,7 +20,7 @@
       justify-content: space-around;
       height:80vmin;
       overflow-y: scroll;
-      border: solid black 5px;
+      border: solid var(--components-black-outline) 5px;
   }
   .likedPicsFrame{
     position: relative;
@@ -27,13 +31,13 @@
   .likedPicture{
     height:40vmin;
     width:40vmin;
-    outline: black solid 5px;
+    outline: var(--components-black-outline) solid 5px;
   }
   .dislikeButton{
       position: absolute !important;
       height:7vmin !important;
       width:7vmin !important;
-      border: 1px black solid !important;
+      border: 1px var(--components-black-outline) solid !important;
       cursor: pointer !important;
   }
   .dislikeIcon{
