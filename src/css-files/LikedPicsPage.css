@@ -1,8 +1,7 @@
+@import url("mainPage.css");
+
 .App {
     text-align: center;
-    --title-outline: blue;
-    --title-background: #61dafb;
-    --components-black-outline: black;
     --dislike-color:crimson;
     --heart-color:pink;
   }

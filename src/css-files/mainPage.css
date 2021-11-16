@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  --title-outline: blue;
+  --title-background: #61dafb;
+  --components-black-outline: black;
 }
 
 
@@ -13,8 +16,8 @@
 
 
 .title{
-  background-color: #61dafb;
-  outline: solid blue 2px;
+  background-color: var(--title-background);
+  outline: solid var(--title-outline) 2px;
 }
 
 
@@ -35,7 +38,7 @@
 .mainPic{
   width: 50vmin !important;
   height: 50vmin !important;
-  border:black solid 2px;
+  border:var(--components-black-outline) solid 2px;
   position:absolute;
 }
 .mainPicDiv{
@@ -55,7 +58,7 @@
   display: flex;
   width: 25vmin;
   height: 25vmin;
-  border: black solid 1px;
+  border: var(--components-black-outline) solid 1px;
   margin: 5px;
   padding: 3px;
   cursor:pointer;
@@ -66,7 +69,7 @@
   display: flex;
   width: 25vmin;
   height: 25vmin;
-  border: black solid 1px;
+  border: var(--components-black-outline) solid 1px;
   margin: 5px;
   padding: 3px;
   cursor:pointer;
