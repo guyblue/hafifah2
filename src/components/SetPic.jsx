@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CircularProgress } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import { Close, FavoriteBorder, FavoriteTwoTone } from '@mui/icons-material';
 import heartEmpty from '../metirial-pics/heart.png';
 import heartFull from '../metirial-pics/HeartFilled.png';
 import '../css-files/mainPage.css';
@@ -43,7 +43,14 @@ const SetPic = () => {
 
     return (
         <div className="mainPicOpt">
-            <img
+            <div className="sideButton" onClick={() => {
+                like(true);
+                changePic();
+            }}
+                onMouseOver={() => (!isLikeHover) && setIsLikeHover(true)}
+                onMouseLeave={() => (isLikeHover) && setIsLikeHover(false)}
+            >
+                {/* <img
                 className="sideButton"
                 src={(isLikeHover ? heartFull : heartEmpty)}
                 alt="likePic" onClick={() => {
@@ -52,14 +59,23 @@ const SetPic = () => {
                 }}
                 onMouseEnter={() => (!isLikeHover) && setIsLikeHover(true)}
                 onMouseOut={() => (isLikeHover) && setIsLikeHover(false)}
-            />
+            /> */}
+                {(isLikeHover ? <FavoriteTwoTone
+                    sx={{ fontSize: 120 }}
+                    onClick={() => {
+                        like(true);
+                        changePic();
+                    }} />
+                    : <FavoriteBorder sx={{ fontSize: 120 }} />)}
+                {/* TODO: change the liking heart pic with MUI icon-->done */}
+            </div>
             <div className='mainPicDiv'>
                 <img className={(isPicLoading ? 'hidden' : 'mainPic')} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
                 <CircularProgress className={((!isPicLoading) ? 'hidden' : 'spinner')} />
             </div>
-            
+
             <div className="sideButton">
-                <CloseIcon sx={{ fontSize: 140 }} onClick={() => changePic()} />
+                <Close sx={{ fontSize: 140 }} onClick={() => changePic()} />
             </div>
         </div>
     )
