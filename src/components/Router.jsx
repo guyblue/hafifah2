@@ -19,8 +19,6 @@ const Router = () =>{
           </Route>
         </Switch>
       </BrowserRouter>
-      // TODO: change name to router-->done
-      // TODO: remove the jsx in the Router's link-->done
     );
 }
 

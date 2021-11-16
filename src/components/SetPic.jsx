@@ -25,7 +25,6 @@ const SetPic = () => {
         else {
             const isAlreadyLiked = (JSON.parse(localStorage.getItem('likedPics')).includes(pic));
             if (!isAlreadyLiked) {
-                // TODO: change 'changes' name to a more reasonable like newArray-->done
                 let newStorageArray = JSON.parse(localStorage.getItem('likedPics'));
                 newStorageArray = [...newStorageArray, pic];
                 localStorage.setItem('likedPics', JSON.stringify(newStorageArray));
@@ -37,7 +36,6 @@ const SetPic = () => {
         setIsPicLoading(true);
         setShouldRefetch(!shouldRefetch);
     }
-    // TODO:rename isClicked to shouldRefetch-->done
 
     return (
         <div className="mainPicOpt">
@@ -55,7 +53,6 @@ const SetPic = () => {
                         changePic();
                     }} />
                     : <FavoriteBorder sx={{ fontSize: 120 }} />)}
-                {/* TODO: change the liking heart pic with MUI icon-->done */}
             </div>
             <div className='mainPicDiv'>
                 <img className={(isPicLoading ? 'hidden' : 'mainPic')} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
@@ -67,7 +64,6 @@ const SetPic = () => {
             </div>
         </div>
     )
-    // TODO: change the like button and next (blackX) button with MUI icons-->done
 }
 
 export default SetPic;
