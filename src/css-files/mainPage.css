@@ -24,24 +24,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  left:55px;
+  left:12vh;
 }
 .hidden{
-  width: 300px;
-  height: 300px;
+  width: 50vmin;
+  height: 50vmin;
   opacity:0%;
   position: absolute;
 }
 .mainPic{
-  width: 300px !important;
-  height: 300px !important;
+  width: 50vmin !important;
+  height: 50vmin !important;
   border:black solid 2px;
   position:absolute;
 }
 .mainPicDiv{
   display: flex;
-  width: 300px !important;
-  height: 300px !important;
+  width: 50vmin !important;
+  height: 50vmin !important;
   margin: 10px !important;
   justify-content: center !important;
   align-items: center !important;
@@ -53,8 +53,8 @@
 
 .likeButton{ 
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 25vmin;
+  height: 25vmin;
   border: black solid 1px;
   margin: 5px;
   padding: 3px;
@@ -64,8 +64,8 @@
 }
 .nextPicButton{ 
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 25vmin;
+  height: 25vmin;
   border: black solid 1px;
   margin: 5px;
   padding: 3px;
@@ -82,18 +82,18 @@
   position: relative;
   display: flex;
   justify-content: center;
-  height: 130px;
-  width: 130px;
+  height: 25vmin;
+  width: 25vmin;
   cursor:pointer;
-  left:55px;
+  left:12vh;
 }
 .likesButtonText{
   position:absolute;
-  top:20%;
-  left:14%;
+  top:5vmin;
+  left: 5vmin;
 }
 .likesPageButtonPic{
   position: relative !important;
-  height:130px !important;
-  width: 130px !important;
+  height:25vmin !important;
+  width: 25vmin !important;
 }
