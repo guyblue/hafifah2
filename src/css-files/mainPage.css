@@ -51,7 +51,7 @@
 }
 
 
-.sideButton{ 
+.likeButton{ 
   display: flex;
   width: 100px;
   height: 100px;
@@ -62,7 +62,18 @@
   justify-content: center;
   align-items: center;
 }
-.sideButton:hover{
+.nextPicButton{ 
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border: black solid 1px;
+  margin: 5px;
+  padding: 3px;
+  cursor:pointer;
+  justify-content: center;
+  align-items: center;
+}
+.nextPicButton:hover{
   opacity: 70%;
 }
 

@@ -41,7 +41,7 @@ const SetPic = () => {
 
     return (
         <div className="mainPicOpt">
-            <div className="sideButton" onClick={() => {
+            <div className="likeButton" onClick={() => {
                 like(true);
                 changePic();
             }}
@@ -62,7 +62,7 @@ const SetPic = () => {
                 <CircularProgress className={((!isPicLoading) ? 'hidden' : 'spinner')} />
             </div>
 
-            <div className="sideButton">
+            <div className="nextPicButton">
                 <Close sx={{ fontSize: 140 }} onClick={() => changePic()} />
             </div>
         </div>
