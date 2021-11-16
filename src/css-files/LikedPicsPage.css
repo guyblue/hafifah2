@@ -14,6 +14,9 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      height:80vmin;
+      overflow-y: scroll;
+      border: solid black 5px;
   }
   .likedPicsFrame{
     position: relative;
