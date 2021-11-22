@@ -2,9 +2,11 @@
 
 .App {
     text-align: center;
-    --dislike-color:crimson;
-    --heart-color:pink;
   }
+
+.Variables{
+    --dislike-color:crimson;
+}
 
   .title{
     background-color: var(--title-background);

@@ -7,13 +7,15 @@ import '../css-files/LikedPicsPage.css';
 
 const LikedPicsPage = () =>{
     return(
-        <div className="App">
-            <h1 className="title">Pictures you liked</h1>
-            <LikedPicsTable />
-            <Link className="mainPageButton" to="">
-            <Favorite className="mainPageButtonPic" sx={{color: pink[500] }} />
-                    <p className="mainButtonText">back to main</p>
-            </Link>
+        <div className="Variables">
+            <div className="App">
+                <h1 className="title">Pictures you liked</h1>
+                <LikedPicsTable />
+                <Link className="mainPageButton" to="">
+                <Favorite className="mainPageButtonPic" sx={{color: pink[500] }} />
+                        <p className="mainButtonText">back to main</p>
+                </Link>
+            </div>
         </div>
     )
 }

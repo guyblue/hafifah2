@@ -5,12 +5,14 @@ import '../css-files/mainPage.css';
 
 const MainPage = () =>{
     return(
-        <div className="App">
-          <h1 className="title">TinDog</h1>
-          <div className="Options">
-            <SetPic />
-            <LikesPageButtonDiv />
-          </div>
+      <div className="Variables">
+          <div className="App">
+            <h1 className="title">TinDog</h1>
+            <div className="Options">
+              <SetPic />
+              <LikesPageButtonDiv />
+            </div>
+        </div>
       </div>
     )
 }
