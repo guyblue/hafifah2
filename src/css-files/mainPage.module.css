@@ -22,6 +22,8 @@
 
 
 .mainPicOpt{
+  height: 60vh;
+  width: 70vw;
   position: relative;
   display: flex;
   justify-content: center;
@@ -93,6 +95,7 @@
   position:absolute;
   top:5vmin;
   left: 4vmin;
+  font-size: 3vmin;
 }
 .likesPageButtonPic{
   position: relative !important;
