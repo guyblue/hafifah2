@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SetLikedPic from './SetLikedPic.jsx';
-import '../css-files/LikedPicsPage.css';
+import styles from '../css-files/LikedPicsPage.module.css';
 
 const LikedPicsFrames = () => {
     const [likedPics, setLikedPics] = useState(JSON.parse(localStorage.getItem('likedPics')));
@@ -14,7 +14,7 @@ const LikedPicsFrames = () => {
 
     return (
         ((!likedPics.length) ? <p>no pictures have been liked yet</p>
-            : <div className="likedPicsTable">{
+            : <div className={styles.likedPicsTable}>{
                 likedPics.map((currPic) =>
                     <SetLikedPic
                         pic={currPic}
