@@ -1,19 +1,17 @@
 import React from 'react';
 import SetPic from '../components/SetPic.jsx';
 import LikesPageButtonDiv from '../components/likesPageButton.jsx';
-import '../css-files/mainPage.css';
+import styles from '../css-files/mainPage.module.css';
 
 const MainPage = () =>{
     return(
-      <div className="Variables">
-          <div className="App">
-            <h1 className="title">TinDog</h1>
-            <div className="Options">
+          <div className={styles.App}>
+            <h1 className={styles.title}>TinDog</h1>
+            <div className={styles.Options}>
               <SetPic />
               <LikesPageButtonDiv />
             </div>
         </div>
-      </div>
     )
 }
 

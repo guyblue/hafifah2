@@ -7,7 +7,6 @@ import '../css-files/LikedPicsPage.css';
 
 const LikedPicsPage = () =>{
     return(
-        <div className="Variables">
             <div className="App">
                 <h1 className="title">Pictures you liked</h1>
                 <LikedPicsTable />
@@ -16,7 +15,6 @@ const LikedPicsPage = () =>{
                         <p className="mainButtonText">back to main</p>
                 </Link>
             </div>
-        </div>
     )
 }
 

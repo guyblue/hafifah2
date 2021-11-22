@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CircularProgress } from '@mui/material';
 import { Close, FavoriteBorder, FavoriteTwoTone } from '@mui/icons-material';
-import '../css-files/mainPage.css';
+import styles from '../css-files/mainPage.module.css';
 
 const SetPic = () => {
     const [pic, setPicture] = useState();
@@ -38,8 +38,8 @@ const SetPic = () => {
     }
 
     return (
-        <div className="mainPicOpt">
-            <div className="likeButton" onClick={() => {
+        <div className={styles.mainPicOpt}>
+            <div className={styles.likeButton} onClick={() => {
                 like(true);
                 changePic();
             }}
@@ -54,12 +54,12 @@ const SetPic = () => {
                     }} />
                     : <FavoriteBorder sx={{ fontSize: '25vmin' }} />)}
             </div>
-            <div className='mainPicDiv'>
-                <img className={(isPicLoading ? 'hidden' : 'mainPic')} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
-                <CircularProgress className={((!isPicLoading) ? 'hidden' : 'spinner')} />
+            <div className={styles.mainPicDiv}>
+                <img className={(isPicLoading ? styles.hidden : styles.mainPic)} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
+                <CircularProgress className={((!isPicLoading) ? styles.hidden : styles.spinner)} />
             </div>
 
-            <div className="nextPicButton">
+            <div className={styles.nextPicButton}>
                 <Close sx={{ fontSize: '25vmin' }} onClick={() => changePic()} />
             </div>
         </div>

@@ -2,14 +2,6 @@
   text-align: center;
 }
 
-.Variables {
-  --title-outline: blue;
-  --title-background: #61dafb;
-  --components-black-outline: black;
-  --heart-color:pink;
-}
-
-
 
 .Options{
   position: relative;
