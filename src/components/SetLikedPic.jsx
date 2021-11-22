@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Favorite, FavoriteBorder } from '@mui/icons-material';
-import { red } from '@mui/material/colors';
 import styles from '../css-files/LikedPicsPage.module.css';
 
 const SetLikedPic = ({ pic, dislike }) => {
@@ -14,8 +13,8 @@ const SetLikedPic = ({ pic, dislike }) => {
                 onMouseLeave={() => (isDislikeHover) && setIsDislikeHover(false)}
             >
                 {(isDislikeHover ?
-                    <FavoriteBorder className={styles.dislikeIcon}  sx={{color: red[900] }} onClick={() => dislike(pic)} /> :
-                    <Favorite className={styles.dislikeIcon}  sx={{color: red[900] }} />)}
+                    <FavoriteBorder className={styles.dislikeIcon}  sx={{color: "var(--dislike-color)" }} onClick={() => dislike(pic)} /> :
+                    <Favorite className={styles.dislikeIcon}  sx={{color: "var(--dislike-color)" }} />)}
             </div>
         </div>
     )

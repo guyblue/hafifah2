@@ -5,9 +5,6 @@
     --liked-pics-sizes:40vmin;
   }
 
-.Variables{
-    --dislike-color:crimson;
-}
 
   .title{
     background-color: var(--title-background);
@@ -23,6 +20,7 @@
       height:80vmin;
       overflow-y: scroll;
       border: solid var(--components-black-outline) 5px;
+      --dislike-color:rgb(201, 0, 40);
   }
   .likedPicsFrame{
     position: relative;

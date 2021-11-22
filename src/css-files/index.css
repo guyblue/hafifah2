@@ -8,7 +8,7 @@ body {
   --title-outline: blue;
   --title-background: #61dafb;
   --components-black-outline: black;
-  --heart-color:pink;
+  --heart-color:rgb(255, 82, 111);
 }
 
 code {
