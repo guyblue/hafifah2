@@ -1,6 +1,8 @@
 
 .App {
     text-align: center;
+    --dislike-button-sizes:7vmin;
+    --liked-pics-sizes:40vmin;
   }
 
 .Variables{
@@ -29,30 +31,32 @@
     
   }
   .likedPicture{
-    height:40vmin;
-    width:40vmin;
+    height:var(--liked-pics-sizes);
+    width:var(--liked-pics-sizes);
     outline: var(--components-black-outline) solid 5px;
   }
   .dislikeButton{
       position: absolute !important;
-      height:7vmin !important;
-      width:7vmin !important;
+      height:var(--dislike-button-sizes) !important;
+      width:var(--dislike-button-sizes) !important;
       border: 1px var(--components-black-outline) solid !important;
       cursor: pointer !important;
   }
   .dislikeIcon{
-    height:7vmin !important;
-    width:7vmin !important;
+    height:var(--dislike-button-sizes) !important;
+    width:var(--dislike-button-sizes) !important;
   }
 
 
 
   .mainPageButton{
+    --main-frame-sizes:120px;
+    --main-button-pic-sizes:130px;
     position: relative;
     display: flex;
     align-items: center;
-    height: 120px;
-    width: 120px;
+    height: var(--main-frame-sizes);
+    width: var(--main-frame-sizes);
     cursor:pointer;
   }
   .mainButtonText{
@@ -62,6 +66,6 @@
   }
   .mainPageButtonPic{
     position: relative !important;
-    height:130px !important;
-    width: 130px !important;
+    height:var(--main-button-pic-sizes) !important;
+    width: var(--main-button-pic-sizes) !important;
   }
