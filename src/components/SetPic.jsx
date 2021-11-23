@@ -47,12 +47,12 @@ const SetPic = () => {
                 onMouseLeave={() => (isLikeHover) && setIsLikeHover(false)}
             >
                 {(isLikeHover ? <FavoriteTwoTone
-                    sx={{ fontSize: '25vmin' }}
+                    sx={{ fontSize: '13vmax' }}
                     onClick={() => {
                         like(true);
                         changePic();
                     }} />
-                    : <FavoriteBorder sx={{ fontSize: '25vmin' }} />)}
+                    : <FavoriteBorder sx={{ fontSize: '13vmax' }} />)}
             </div>
             <div className={styles.mainPicDiv}>
                 <img className={(isPicLoading ? styles.hidden : styles.mainPic)} src={pic} alt="mainPic" onLoad={() => setIsPicLoading(false)} />
@@ -60,7 +60,7 @@ const SetPic = () => {
             </div>
 
             <div className={styles.nextPicButton}>
-                <Close sx={{ fontSize: '25vmin' }} onClick={() => changePic()} />
+                <Close sx={{ fontSize: '13vmax' }} onClick={() => changePic()} />
             </div>
         </div>
     )
